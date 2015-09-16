@@ -55,13 +55,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -73,10 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -147,9 +142,8 @@
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(51, 2);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(469, 43);
+            this.lblFecha.Size = new System.Drawing.Size(524, 43);
             this.lblFecha.TabIndex = 13;
-            this.lblFecha.Text = "Fecha";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox2
@@ -167,7 +161,7 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = global::turnosDashboard.Properties.Resources.time;
-            this.pictureBox3.Location = new System.Drawing.Point(528, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(583, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,12 +173,11 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(574, 2);
+            this.lblHora.Location = new System.Drawing.Point(629, 2);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(55, 43);
+            this.lblHora.Size = new System.Drawing.Size(1, 43);
             this.lblHora.TabIndex = 14;
             this.lblHora.Tag = "0";
-            this.lblHora.Text = "Hora";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblHora.Visible = false;
             // 
@@ -219,8 +212,8 @@
             this.lblVentanilla.Name = "lblVentanilla";
             this.lblVentanilla.Size = new System.Drawing.Size(630, 179);
             this.lblVentanilla.TabIndex = 7;
-            this.lblVentanilla.Text = "1";
-            this.lblVentanilla.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblVentanilla.Text = "-";
+            this.lblVentanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -232,7 +225,7 @@
             this.label4.Size = new System.Drawing.Size(624, 63);
             this.label4.TabIndex = 6;
             this.label4.Text = "Ventanilla";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tableLayoutPanel4
             // 
@@ -282,7 +275,6 @@
             this.lblTiempo1.Name = "lblTiempo1";
             this.lblTiempo1.Size = new System.Drawing.Size(285, 43);
             this.lblTiempo1.TabIndex = 13;
-            this.lblTiempo1.Text = "Tiempo 1";
             this.lblTiempo1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox4
@@ -305,7 +297,6 @@
             this.lblTiempo2.Name = "lblTiempo2";
             this.lblTiempo2.Size = new System.Drawing.Size(285, 43);
             this.lblTiempo2.TabIndex = 14;
-            this.lblTiempo2.Text = "Tiempo 2";
             this.lblTiempo2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel10
@@ -345,7 +336,6 @@
             this.lblTurno2Atiende.Name = "lblTurno2Atiende";
             this.lblTurno2Atiende.Size = new System.Drawing.Size(90, 105);
             this.lblTurno2Atiende.TabIndex = 15;
-            this.lblTurno2Atiende.Text = "2";
             this.lblTurno2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblVentanilla2Atiende
@@ -357,7 +347,6 @@
             this.lblVentanilla2Atiende.Name = "lblVentanilla2Atiende";
             this.lblVentanilla2Atiende.Size = new System.Drawing.Size(143, 105);
             this.lblVentanilla2Atiende.TabIndex = 14;
-            this.lblVentanilla2Atiende.Text = "2";
             this.lblVentanilla2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblServicio2Atiende
@@ -369,7 +358,6 @@
             this.lblServicio2Atiende.Name = "lblServicio2Atiende";
             this.lblServicio2Atiende.Size = new System.Drawing.Size(375, 105);
             this.lblServicio2Atiende.TabIndex = 13;
-            this.lblServicio2Atiende.Text = "Servicio 2";
             this.lblServicio2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblServicio1Atiende
@@ -381,7 +369,6 @@
             this.lblServicio1Atiende.Name = "lblServicio1Atiende";
             this.lblServicio1Atiende.Size = new System.Drawing.Size(375, 104);
             this.lblServicio1Atiende.TabIndex = 12;
-            this.lblServicio1Atiende.Text = "Servicio 1";
             this.lblServicio1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblVentanilla1Atiende
@@ -393,7 +380,6 @@
             this.lblVentanilla1Atiende.Name = "lblVentanilla1Atiende";
             this.lblVentanilla1Atiende.Size = new System.Drawing.Size(143, 104);
             this.lblVentanilla1Atiende.TabIndex = 11;
-            this.lblVentanilla1Atiende.Text = "1";
             this.lblVentanilla1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTurno1Atiende
@@ -405,7 +391,6 @@
             this.lblTurno1Atiende.Name = "lblTurno1Atiende";
             this.lblTurno1Atiende.Size = new System.Drawing.Size(90, 104);
             this.lblTurno1Atiende.TabIndex = 10;
-            this.lblTurno1Atiende.Text = "1";
             this.lblTurno1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -454,23 +439,6 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(634, 456);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel9, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(643, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(634, 456);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSize = true;
@@ -481,14 +449,29 @@
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblTurno, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 104);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(634, 352);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(634, 456);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // lblTurno
+            // 
+            this.lblTurno.AutoSize = true;
+            this.lblTurno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 300F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)), true);
+            this.lblTurno.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTurno.Location = new System.Drawing.Point(2, 67);
+            this.lblTurno.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Size = new System.Drawing.Size(647, 387);
+            this.lblTurno.TabIndex = 4;
+            this.lblTurno.Text = "100";
+            this.lblTurno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -497,74 +480,30 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label3.Location = new System.Drawing.Point(5, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(624, 63);
+            this.label3.Size = new System.Drawing.Size(641, 63);
             this.label3.TabIndex = 5;
             this.label3.Text = "Turno";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // lblTurno
+            // tableLayoutPanel2
             // 
-            this.lblTurno.AutoSize = true;
-            this.lblTurno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 250F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)), true);
-            this.lblTurno.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblTurno.Location = new System.Drawing.Point(2, 67);
-            this.lblTurno.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(630, 283);
-            this.lblTurno.TabIndex = 4;
-            this.lblTurno.Text = "100";
-            this.lblTurno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.AutoSize = true;
-            this.tableLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.73885F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.26115F));
-            this.tableLayoutPanel9.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(634, 94);
-            this.tableLayoutPanel9.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::turnosDashboard.Properties.Resources.logoGob;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.label1.Location = new System.Drawing.Point(239, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 94);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Registro Civil";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(643, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(634, 456);
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // dashboard
             // 
-            this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 768);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -591,13 +530,10 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -607,18 +543,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblTurno;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label lblVentanilla;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTurno2Atiende;
         private System.Windows.Forms.Label lblVentanilla2Atiende;
@@ -637,6 +565,11 @@
         private System.Windows.Forms.Label lblTiempo1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblTiempo2;
+        private System.Windows.Forms.Label lblVentanilla;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTurno;
 
 
     }

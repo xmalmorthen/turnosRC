@@ -8,15 +8,20 @@ namespace turnosDashboard
 {
     static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
+        public static dashboard main;
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashboard());
+
+            main = new dashboard();
+            main.TopMost = true;
+            #if DEBUG
+                main.TopMost = false;
+            #endif
+            Application.Run(main);
         }
     }
 }

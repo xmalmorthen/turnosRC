@@ -44,15 +44,13 @@ namespace turnosDashboard.Models
                 string wsRESTFullRC = string.Format("{0}/{1}/", turnosDashboard.Properties.Settings.Default.ApiRestCitasRC, turnosDashboard.Properties.Settings.Default.VersionApiRestCitasRC);
 
                 RestClient client = new RestClient(wsRESTFullRC);
-                client.Timeout = 2000;
+                client.Timeout = turnosDashboard.Properties.Settings.Default.RESTRequestTimeOut;
 
                 // client.Authenticator = new HttpBasicAuthenticator(username, password);
 
                 string method = string.Format("{0}?Oficina={1}","obtener/turno",turnosDashboard.Properties.Settings.Default.IdOficina.ToString().Trim());
 
                 var request = new RestRequest(method, Method.GET);
-
-                // easily add HTTP Headers
                 request.AddHeader("Accept", "application/json");
 
                 try
@@ -65,25 +63,28 @@ namespace turnosDashboard.Models
                 {
                     if (response.ResponseStatus == ResponseStatus.Completed)
                     {
-                        if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok") == true)
+                        if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
                         {
                             if (TurnoActual.Turno != response.Data.response.SingleOrDefault().Turno)
                             {
-                                turno item = new turno();
-                                item.Turno = TurnoActual.Turno;
-                                item.Ventanilla = TurnoActual.Ventanilla;
-                                item.Tramite = TurnoActual.Tramite;
-                                TurnosAtendiendo.Add(item);
+                                if (TurnoActual.Turno != 0)
+                                {
+                                    turno item = new turno();
+                                    item.Turno = TurnoActual.Turno;
+                                    item.Ventanilla = TurnoActual.Ventanilla;
+                                    item.Tramite = TurnoActual.Tramite;
+                                    TurnosAtendiendo.Add(item);
+                                }
 
                                 TurnoActual.Turno = response.Data.response.SingleOrDefault().Turno;
                                 TurnoActual.Ventanilla = response.Data.response.SingleOrDefault().NombreVentanilla;
                                 TurnoActual.Tramite = response.Data.response.SingleOrDefault().Tramite;
 
-                                turnoChanged = true;
+                                TurnoChanged = true;
                             }
                             else
                             {
-                                turnoChanged = false;
+                                TurnoChanged = false;
                             }
                         }
                     }

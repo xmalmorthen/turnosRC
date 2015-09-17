@@ -23,39 +23,77 @@ namespace turnosDashboard.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:666/wscitasregistrocivil/index.php")]
         public string ApiRestCitasRC {
             get {
                 return ((string)(this["ApiRestCitasRC"]));
             }
-            set {
-                this["ApiRestCitasRC"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("apiV1")]
         public string VersionApiRestCitasRC {
             get {
                 return ((string)(this["VersionApiRestCitasRC"]));
             }
-            set {
-                this["VersionApiRestCitasRC"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("37")]
+        public int IdOficina {
+            get {
+                return ((int)(this["IdOficina"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("37")]
-        public string IdOficina {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ScreenShowNumber {
             get {
-                return ((string)(this["IdOficina"]));
+                return ((int)(this["ScreenShowNumber"]));
             }
-            set {
-                this["IdOficina"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("defaultSound.wav")]
+        public string defaultSound {
+            get {
+                return ((string)(this["defaultSound"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4000")]
+        public int RESTCallInterval {
+            get {
+                return ((int)(this["RESTCallInterval"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        public int RESTRequestTimeOut {
+            get {
+                return ((int)(this["RESTRequestTimeOut"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>19.24</string>\r\n  <string>-103.72</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection LatLongWeatherDefault {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["LatLongWeatherDefault"]));
             }
         }
     }

@@ -18,6 +18,8 @@ namespace turnosDashboard
 
             main = new dashboard();
             main.TopMost = true;
+            main.Location = Screen.AllScreens[turnosDashboard.Properties.Settings.Default.ScreenShowNumber].WorkingArea.Location;
+
             #if DEBUG
                 main.TopMost = false;
             #endif

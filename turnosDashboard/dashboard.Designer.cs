@@ -468,9 +468,9 @@
             this.lblTurno.Location = new System.Drawing.Point(2, 67);
             this.lblTurno.Margin = new System.Windows.Forms.Padding(0);
             this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(647, 387);
+            this.lblTurno.Size = new System.Drawing.Size(630, 387);
             this.lblTurno.TabIndex = 4;
-            this.lblTurno.Text = "100";
+            this.lblTurno.Text = "0";
             this.lblTurno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -480,7 +480,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label3.Location = new System.Drawing.Point(5, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(641, 63);
+            this.label3.Size = new System.Drawing.Size(624, 63);
             this.label3.TabIndex = 5;
             this.label3.Text = "Turno";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;

@@ -6,10 +6,25 @@ using System.Threading.Tasks;
 
 namespace turnosDashboard.Models.structures
 {
+    class RESTTurno {
+        private RESTService rEST_Service = new RESTService();
+        public RESTService REST_Service
+        {
+            get { return rEST_Service; }
+            set { rEST_Service = value; }
+        }
+
+        private List<strctTurno> _response = new List<strctTurno>();
+        public List<strctTurno> response
+        {
+            get { return _response; }
+            set { _response = value; }
+        }
+
+    }
+
     class strctTurno
     {
-
-
         int turno;
         public int Turno
         {

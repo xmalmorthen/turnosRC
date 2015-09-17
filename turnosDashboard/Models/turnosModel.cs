@@ -60,28 +60,31 @@ namespace turnosDashboard.Models
                     asyncHandle.Abort();
                 }
                 catch (Exception){}
-                
-                asyncHandle = client.ExecuteAsync<strctTurno>(request, response =>
+
+                asyncHandle = client.ExecuteAsync<RESTTurno>(request, response =>
                 {
                     if (response.ResponseStatus == ResponseStatus.Completed)
                     {
-                        if (TurnoActual.Turno != response.Data.Turno)
+                        if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok") == true)
                         {
-                            turno item = new turno();
-                            item.Turno = TurnoActual.Turno;
-                            item.Ventanilla = TurnoActual.Ventanilla;
-                            item.Tramite = TurnoActual.Tramite;
-                            TurnosAtendiendo.Add(item);
+                            if (TurnoActual.Turno != response.Data.response.SingleOrDefault().Turno)
+                            {
+                                turno item = new turno();
+                                item.Turno = TurnoActual.Turno;
+                                item.Ventanilla = TurnoActual.Ventanilla;
+                                item.Tramite = TurnoActual.Tramite;
+                                TurnosAtendiendo.Add(item);
 
-                            TurnoActual.Turno = response.Data.Turno;
-                            TurnoActual.Ventanilla = response.Data.NombreVentanilla;
-                            TurnoActual.Tramite = response.Data.Tramite;
+                                TurnoActual.Turno = response.Data.response.SingleOrDefault().Turno;
+                                TurnoActual.Ventanilla = response.Data.response.SingleOrDefault().NombreVentanilla;
+                                TurnoActual.Tramite = response.Data.response.SingleOrDefault().Tramite;
 
-                            turnoChanged = true;
-                        }
-                        else
-                        {
-                            turnoChanged = false;
+                                turnoChanged = true;
+                            }
+                            else
+                            {
+                                turnoChanged = false;
+                            }
                         }
                     }
                 });

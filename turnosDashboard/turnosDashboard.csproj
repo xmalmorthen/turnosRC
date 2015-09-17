@@ -62,6 +62,7 @@
     <Compile Include="dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\structures\REST_Service.cs" />
     <Compile Include="Models\structures\strctTurno.cs" />
     <Compile Include="Models\turnosModel.cs" />
     <Compile Include="Program.cs" />

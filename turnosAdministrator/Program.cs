@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Demo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace turnosAdministrator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            frmLogIn LogIn = new frmLogIn();
+
+            if (LogIn.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmMain());
+            }
         }
     }
 }

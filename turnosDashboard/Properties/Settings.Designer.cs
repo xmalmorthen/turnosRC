@@ -88,12 +88,19 @@ namespace turnosDashboard.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>19.24</string>\r\n  <string>-103.72</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection LatLongWeatherDefault {
+        [global::System.Configuration.DefaultSettingValueAttribute("Colima,mx")]
+        public string WeatherDefault {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["LatLongWeatherDefault"]));
+                return ((string)(this["WeatherDefault"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60")]
+        public int WeatherRefresh {
+            get {
+                return ((int)(this["WeatherRefresh"]));
             }
         }
     }

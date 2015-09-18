@@ -26,18 +26,15 @@ namespace turnosDashboard
 
         void getWeatherData()
         {
-            strctWeather data = weather.get(turnosDashboard.Properties.Settings.Default.LatLongWeatherDefault[0], turnosDashboard.Properties.Settings.Default.LatLongWeatherDefault[1]);
+            strctWeather data = weather.get(turnosDashboard.Properties.Settings.Default.WeatherDefault);
             if (data != null)
             {
-                lblNameDefaultWeather.Invoke((MethodInvoker)(() => lblNameDefaultWeather.Text = data.Name));
+                lblDefaultWeather.Invoke((MethodInvoker)(() => lblDefaultWeather.Text = string.Format("{0} {1} °C", data.Name, data.Temp)));
                 pbIconDefaultWeather.Invoke((MethodInvoker)(() => pbIconDefaultWeather.Load(data.UrlIcon)));
-                lblTempDefaultWeather.Invoke((MethodInvoker)(() => lblTempDefaultWeather.Text = data.Temp));
 
-                System.Threading.Thread.Sleep(5000);
+                System.Threading.Thread.Sleep(turnosDashboard.Properties.Settings.Default.WeatherRefresh * 1000);
             }
-            else {
-                getWeatherData();
-            }
+           getWeatherData();
         }
 
         void initializeControls() {
@@ -63,7 +60,7 @@ namespace turnosDashboard
             tmRefesh.Tick += tmRefesh_Tick;
             tmRefesh.Start();
 
-            axWindowsMediaPlayer.Ctlcontrols.play();
+            player.Ctlcontrols.play();
         }
 
         void tmHora_Tick(object sender, EventArgs e)

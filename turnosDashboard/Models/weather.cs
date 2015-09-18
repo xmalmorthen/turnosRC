@@ -22,7 +22,7 @@ namespace turnosDashboard.Models
         {
             get { return temp; }
             set {
-                temp = (float.Parse(value) - 273.15).ToString();
+                temp = Math.Round((Decimal)(float.Parse(value) - 273.15), 0, MidpointRounding.AwayFromZero).ToString();
             }
         }
 
@@ -37,9 +37,9 @@ namespace turnosDashboard.Models
     static class weather
     {
         private static string weatherURL = "http://api.openweathermap.org/data/2.5/";
-        private static string method = "weather?lat=${lat}&lon=${lon}";
+        private static string method = "weather?q=${value}";
 
-        public static strctWeather get(string lat, string lon)
+        public static strctWeather get(string value)
         {
             strctWeather model = null;
             try
@@ -49,7 +49,7 @@ namespace turnosDashboard.Models
                 RestClient client = new RestClient(invoke);
                 client.Timeout = 10000;
 
-                var request = new RestRequest(method.Replace("${lat}", lat).Replace("${lon}", lon), Method.GET);
+                var request = new RestRequest(method.Replace("${value}", value), Method.GET);
                 request.AddHeader("Accept", "application/json");
 
                 RestResponse response = client.Execute(request) as RestResponse;

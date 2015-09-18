@@ -65,27 +65,22 @@ namespace turnosDashboard.Models
                     {
                         if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
                         {
-                            if (TurnoActual.Turno != response.Data.response.SingleOrDefault().Turno)
+                            try
                             {
-                                if (TurnoActual.Turno != 0)
+                                if (TurnoActual.Ventanilla.Equals(response.Data.response.SingleOrDefault().NombreVentanilla, StringComparison.CurrentCultureIgnoreCase) == false)
                                 {
-                                    turno item = new turno();
-                                    item.Turno = TurnoActual.Turno;
-                                    item.Ventanilla = TurnoActual.Ventanilla;
-                                    item.Tramite = TurnoActual.Tramite;
-                                    TurnosAtendiendo.Add(item);
+                                    changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);
                                 }
-
-                                TurnoActual.Turno = response.Data.response.SingleOrDefault().Turno;
-                                TurnoActual.Ventanilla = response.Data.response.SingleOrDefault().NombreVentanilla;
-                                TurnoActual.Tramite = response.Data.response.SingleOrDefault().Tramite;
-
-                                TurnoChanged = true;
+                                else if (TurnoActual.Turno.Equals(response.Data.response.SingleOrDefault().Turno) == false)
+                                {
+                                    changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);
+                                }
                             }
-                            else
+                            catch (Exception)
                             {
-                                TurnoChanged = false;
+                                changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);                                
                             }
+                            
                         }
                     }
                 });
@@ -98,6 +93,24 @@ namespace turnosDashboard.Models
             }
             return true;
         }
+
+        private static void changeTurno(int turno, string ventanilla, string tramite) {
+            if (TurnoActual.Turno != 0)
+            {
+                turno item = new turno();
+                item.Turno = TurnoActual.Turno;
+                item.Ventanilla = TurnoActual.Ventanilla;
+                item.Tramite = TurnoActual.Tramite;
+                TurnosAtendiendo.Add(item);
+            }
+
+            TurnoActual.Turno = turno;
+            TurnoActual.Ventanilla = ventanilla;
+            TurnoActual.Tramite = tramite;
+
+            TurnoChanged = true;
+        }
+    
     }
 
     class turno{

@@ -55,14 +55,14 @@
             this.pbIconOtherWeather = new System.Windows.Forms.PictureBox();
             this.lblOtherWeather = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.pbIconDefaultWeather = new System.Windows.Forms.PictureBox();
+            this.lblDefaultWeather = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.player = new AxWMPLib.AxWindowsMediaPlayer();
-            this.lblDefaultWeather = new System.Windows.Forms.Label();
-            this.pbIconDefaultWeather = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -75,11 +75,11 @@
             this.tableLayoutPanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconOtherWeather)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconDefaultWeather)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbIconDefaultWeather)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -455,6 +455,28 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(276, 37);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
+            // pbIconDefaultWeather
+            // 
+            this.pbIconDefaultWeather.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbIconDefaultWeather.Location = new System.Drawing.Point(0, 0);
+            this.pbIconDefaultWeather.Margin = new System.Windows.Forms.Padding(0);
+            this.pbIconDefaultWeather.Name = "pbIconDefaultWeather";
+            this.pbIconDefaultWeather.Size = new System.Drawing.Size(50, 37);
+            this.pbIconDefaultWeather.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbIconDefaultWeather.TabIndex = 16;
+            this.pbIconDefaultWeather.TabStop = false;
+            // 
+            // lblDefaultWeather
+            // 
+            this.lblDefaultWeather.AutoSize = true;
+            this.lblDefaultWeather.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDefaultWeather.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDefaultWeather.Location = new System.Drawing.Point(53, 0);
+            this.lblDefaultWeather.Name = "lblDefaultWeather";
+            this.lblDefaultWeather.Size = new System.Drawing.Size(220, 37);
+            this.lblDefaultWeather.TabIndex = 17;
+            this.lblDefaultWeather.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -541,28 +563,6 @@
             this.player.Size = new System.Drawing.Size(566, 452);
             this.player.TabIndex = 1;
             // 
-            // lblDefaultWeather
-            // 
-            this.lblDefaultWeather.AutoSize = true;
-            this.lblDefaultWeather.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDefaultWeather.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDefaultWeather.Location = new System.Drawing.Point(53, 0);
-            this.lblDefaultWeather.Name = "lblDefaultWeather";
-            this.lblDefaultWeather.Size = new System.Drawing.Size(220, 37);
-            this.lblDefaultWeather.TabIndex = 17;
-            this.lblDefaultWeather.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbIconDefaultWeather
-            // 
-            this.pbIconDefaultWeather.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbIconDefaultWeather.Location = new System.Drawing.Point(0, 0);
-            this.pbIconDefaultWeather.Margin = new System.Windows.Forms.Padding(0);
-            this.pbIconDefaultWeather.Name = "pbIconDefaultWeather";
-            this.pbIconDefaultWeather.Size = new System.Drawing.Size(50, 37);
-            this.pbIconDefaultWeather.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbIconDefaultWeather.TabIndex = 16;
-            this.pbIconDefaultWeather.TabStop = false;
-            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -596,13 +596,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIconOtherWeather)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconDefaultWeather)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbIconDefaultWeather)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,20 +28,23 @@ namespace turnosAdministrator
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            pbSpnr.Visible = true;            
-            session.isValid(txtUsr.Text.Trim(), txtPass.Text.Trim(),);
+            pbSpnr.Visible = true;
+            session.isValid(txtUsr.Text.Trim(), txtPass.Text.Trim(),new callBackFunc(callBackIsValidFunc));
         }
 
-        public void callBackIsValidFunc(Boolean isValid, string message) { 
-            pbSpnr.Visible = false;
-            this.Enabled = true;
+        public delegate void callBackFunc(Boolean isValid, string message);
+        public void callBackIsValidFunc(Boolean isValid, string message) {
+
+            pbSpnr.Invoke((MethodInvoker)(() => pbSpnr.Visible =false));
+            this.Invoke((MethodInvoker)(() => this.Enabled = true));
+            
             if (!isValid)
             {
                 MetroMessageBox.Show(this, message, "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
             else
             {
-                this.DialogResult = DialogResult.OK;
+                this.Invoke((MethodInvoker)(() => this.DialogResult = DialogResult.OK));
             }
         }
         

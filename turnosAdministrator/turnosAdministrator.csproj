@@ -88,6 +88,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <None Include="Resources\menu1.png" />
+    <None Include="Resources\menu.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\_lock.png" />
     <None Include="Resources\user.png" />

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -69,6 +70,11 @@
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.metroTabPage3 = new System.Windows.Forms.TabPage();
+            this.metroContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -86,6 +92,8 @@
             this.metroPanel1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            this.metroContextMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // metroStyleManager
@@ -346,7 +354,7 @@
             this.tabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCtrl.Location = new System.Drawing.Point(20, 60);
             this.tabCtrl.Name = "tabCtrl";
-            this.tabCtrl.SelectedIndex = 2;
+            this.tabCtrl.SelectedIndex = 0;
             this.tabCtrl.Size = new System.Drawing.Size(660, 320);
             this.tabCtrl.Style = MetroFramework.MetroColorStyle.Silver;
             this.tabCtrl.TabIndex = 0;
@@ -633,11 +641,52 @@
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Administracón de Clima";
             // 
+            // metroContextMenu
+            // 
+            this.metroContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.metroContextMenu.Name = "metroContextMenu1";
+            this.metroContextMenu.Size = new System.Drawing.Size(153, 76);
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fileToolStripMenuItem.Text = "Cerrar Sesión";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Cerrar";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(649, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 400);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabCtrl);
             this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "frmMain";
@@ -666,7 +715,10 @@
             this.metroPanel1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
+            this.metroContextMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -709,6 +761,11 @@
         private MetroFramework.Controls.MetroButton btnOk;
         private MetroFramework.Controls.MetroButton btnClean;
         private MetroFramework.Controls.MetroGrid gdWeathers;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

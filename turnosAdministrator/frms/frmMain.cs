@@ -33,5 +33,20 @@ namespace turnosAdministrator
 
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            metroContextMenu.Show(pictureBox2, new Point(0, pictureBox2.Height));
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;           
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Retry;
+        }
+
     }
 }

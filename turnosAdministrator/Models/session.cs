@@ -12,9 +12,10 @@ namespace turnosAdministrator.Models
 {
     static class session
     {
-        public static Boolean isValid(string usr, string pwd, out string message) {
-            Boolean response = false;
-            message = "Usuario y/o contraseña incorrectos";
+        public static void isValid(string usr, string pwd, turnosAdministrator.frmLogIn.callBackFunc callBack)
+        {            
+            Boolean response = false; 
+            string message = "Usuario y/o contraseña incorrectos";
             try
             {
                 string wsRESTFullRC = string.Format("{0}/{1}/", turnosAdministrator.Properties.Settings.Default.ApiRestCitasRC, turnosAdministrator.Properties.Settings.Default.VersionApiRestCitasRC);
@@ -30,26 +31,26 @@ namespace turnosAdministrator.Models
                 var request = new RestRequest(method, Method.GET);
                 request.AddHeader("Accept", "application/json");
 
-                RestResponse<RESTSession> RestResponse = client.Execute<RESTSession>(request) as RestResponse<RESTSession>;
-                if (RestResponse.ResponseStatus == ResponseStatus.Completed)
+                RestRequestAsyncHandle asyncHandle = client.ExecuteAsync<RESTSession>(request, RestResponse =>
                 {
-                    if (RestResponse.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
+                    if (RestResponse.ResponseStatus == ResponseStatus.Completed)
                     {
-                        if (RestResponse.Data.response[0].Success.Equals("1", StringComparison.CurrentCultureIgnoreCase) == true)
+                        if (RestResponse.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
                         {
-                            response = true;
+                            if (RestResponse.Data.response[0].Success.Equals("1", StringComparison.CurrentCultureIgnoreCase) == true)
+                            {
+                                response = true;
+                            }
                         }
                     }
-                }
+                    callBack(response, message);
+                });
             }
             catch (Exception ex)
             {
                 Logger logger = LogManager.GetCurrentClassLogger();
                 logger.Error(ex, ex.Message);
-                message = ex.Message;
             }
-            
-            return response;
         }
     }
 }

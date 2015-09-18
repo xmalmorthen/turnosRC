@@ -17,12 +17,29 @@ namespace turnosAdministrator
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            frmLogIn LogIn = new frmLogIn();
+            
+            Init();
+        }
 
+        static void Init() {            
+            frmLogIn LogIn = new frmLogIn();
             if (LogIn.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new frmMain());
+                LogIn.Close();
+                LogIn.Dispose();
+                LogIn = null;
+
+                frmMain MainFrm = new frmMain();
+                if (MainFrm.ShowDialog() == DialogResult.Retry)
+                {
+                    MainFrm.Close();
+                    MainFrm.Dispose();
+                    MainFrm = null;
+                    Init();
+                }
+                Application.Exit();                
             }
         }
+
     }
 }

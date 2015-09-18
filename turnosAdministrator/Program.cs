@@ -16,7 +16,6 @@ namespace turnosAdministrator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             
             Init();
         }

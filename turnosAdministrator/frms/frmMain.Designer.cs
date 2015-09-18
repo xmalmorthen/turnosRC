@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtWeatherDescrip = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.txtWeather = new MetroFramework.Controls.MetroTextBox();
@@ -62,7 +61,6 @@
             this.lblServicio1Atiende = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.lblTurnoActual = new System.Windows.Forms.Label();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnTurnoSiguiente = new MetroFramework.Controls.MetroButton();
@@ -71,10 +69,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.metroTabPage3 = new System.Windows.Forms.TabPage();
             this.metroContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblVentanillaActual = new System.Windows.Forms.Label();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -82,7 +84,6 @@
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBtns.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdWeathers)).BeginInit();
             this.tabCtrl.SuspendLayout();
@@ -94,6 +95,7 @@
             this.metroTabPage3.SuspendLayout();
             this.metroContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroStyleManager
@@ -153,19 +155,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 219);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroStyleExtender1.SetApplyMetroTheme(this.pictureBox1, true);
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::turnosAdministrator.Properties.Resources.add;
-            this.pictureBox1.Location = new System.Drawing.Point(286, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.metroToolTip1.SetToolTip(this.pictureBox1, "Nuevo municipio o ciudad");
             // 
             // txtWeatherDescrip
             // 
@@ -302,23 +291,23 @@
             this.gdWeathers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdWeathers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gdWeathers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gdWeathers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle2;
             this.gdWeathers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdWeathers.EnableHeadersVisualStyles = false;
             this.gdWeathers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -327,14 +316,14 @@
             this.gdWeathers.Name = "gdWeathers";
             this.gdWeathers.ReadOnly = true;
             this.gdWeathers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gdWeathers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gdWeathers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gdWeathers.Size = new System.Drawing.Size(315, 260);
@@ -355,7 +344,7 @@
             this.tabCtrl.Location = new System.Drawing.Point(20, 60);
             this.tabCtrl.Name = "tabCtrl";
             this.tabCtrl.SelectedIndex = 0;
-            this.tabCtrl.Size = new System.Drawing.Size(660, 320);
+            this.tabCtrl.Size = new System.Drawing.Size(762, 320);
             this.tabCtrl.Style = MetroFramework.MetroColorStyle.Silver;
             this.tabCtrl.TabIndex = 0;
             this.tabCtrl.UseSelectable = true;
@@ -372,7 +361,7 @@
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(652, 278);
+            this.metroTabPage1.Size = new System.Drawing.Size(754, 278);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Toma de Turnos";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -404,7 +393,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(632, 160);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(734, 160);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTurno2Atiende
@@ -433,7 +422,7 @@
             this.lblServicio2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblServicio2Atiende.Location = new System.Drawing.Point(142, 94);
             this.lblServicio2Atiende.Name = "lblServicio2Atiende";
-            this.lblServicio2Atiende.Size = new System.Drawing.Size(485, 64);
+            this.lblServicio2Atiende.Size = new System.Drawing.Size(587, 64);
             this.lblServicio2Atiende.TabIndex = 16;
             this.lblServicio2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -469,7 +458,7 @@
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel5.Location = new System.Drawing.Point(142, 2);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(485, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(587, 25);
             this.metroLabel5.TabIndex = 10;
             this.metroLabel5.Text = "Servicio";
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -500,23 +489,26 @@
             this.lblServicio1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblServicio1Atiende.Location = new System.Drawing.Point(142, 29);
             this.lblServicio1Atiende.Name = "lblServicio1Atiende";
-            this.lblServicio1Atiende.Size = new System.Drawing.Size(485, 63);
+            this.lblServicio1Atiende.Size = new System.Drawing.Size(587, 63);
             this.lblServicio1Atiende.TabIndex = 13;
             this.lblServicio1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel2.Controls.Add(this.lblTurnoActual);
             this.metroPanel2.Controls.Add(this.metroLabel2);
+            this.metroPanel2.Controls.Add(this.lblVentanillaActual);
+            this.metroPanel2.Controls.Add(this.metroLabel8);
+            this.metroPanel2.Controls.Add(this.lblTurnoActual);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(499, 10);
+            this.metroPanel2.Location = new System.Drawing.Point(305, 10);
             this.metroPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(143, 92);
+            this.metroPanel2.Size = new System.Drawing.Size(439, 92);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -524,33 +516,18 @@
             // 
             // lblTurnoActual
             // 
-            this.lblTurnoActual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTurnoActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTurnoActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnoActual.ForeColor = System.Drawing.Color.Red;
-            this.lblTurnoActual.Location = new System.Drawing.Point(3, 23);
+            this.lblTurnoActual.Location = new System.Drawing.Point(321, 14);
             this.lblTurnoActual.Name = "lblTurnoActual";
-            this.lblTurnoActual.Size = new System.Drawing.Size(135, 61);
+            this.lblTurnoActual.Size = new System.Drawing.Size(112, 61);
             this.lblTurnoActual.TabIndex = 8;
-            this.lblTurnoActual.Text = "12";
+            this.lblTurnoActual.Text = "1";
             this.lblTurnoActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 3);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(3);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(112, 19);
-            this.metroLabel2.TabIndex = 7;
-            this.metroLabel2.Text = "Turno en atención";
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.btnTurnoSiguiente);
@@ -561,7 +538,7 @@
             this.metroPanel1.Location = new System.Drawing.Point(10, 10);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(10);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(480, 92);
+            this.metroPanel1.Size = new System.Drawing.Size(286, 92);
             this.metroPanel1.TabIndex = 4;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -581,7 +558,7 @@
             // btnTurnoSiguiente
             // 
             this.btnTurnoSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTurnoSiguiente.Location = new System.Drawing.Point(322, 61);
+            this.btnTurnoSiguiente.Location = new System.Drawing.Point(128, 61);
             this.btnTurnoSiguiente.Margin = new System.Windows.Forms.Padding(5);
             this.btnTurnoSiguiente.Name = "btnTurnoSiguiente";
             this.btnTurnoSiguiente.Size = new System.Drawing.Size(151, 23);
@@ -597,7 +574,7 @@
             this.cbmVentanillas.Location = new System.Drawing.Point(5, 23);
             this.cbmVentanillas.Margin = new System.Windows.Forms.Padding(5);
             this.cbmVentanillas.Name = "cbmVentanillas";
-            this.cbmVentanillas.Size = new System.Drawing.Size(468, 29);
+            this.cbmVentanillas.Size = new System.Drawing.Size(274, 29);
             this.cbmVentanillas.TabIndex = 4;
             this.cbmVentanillas.UseSelectable = true;
             // 
@@ -648,32 +625,19 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.metroContextMenu.Name = "metroContextMenu1";
-            this.metroContextMenu.Size = new System.Drawing.Size(153, 76);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fileToolStripMenuItem.Text = "Cerrar Sesión";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            this.metroContextMenu.Size = new System.Drawing.Size(144, 54);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Cerrar";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(140, 6);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(649, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(751, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -681,11 +645,75 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroStyleExtender1.SetApplyMetroTheme(this.pictureBox1, true);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::turnosAdministrator.Properties.Resources.add;
+            this.pictureBox1.Location = new System.Drawing.Point(286, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pictureBox1, "Nuevo municipio o ciudad");
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fileToolStripMenuItem.Image")));
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.fileToolStripMenuItem.Text = "Cerrar Sesión";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exitToolStripMenuItem.Image = global::turnosAdministrator.Properties.Resources.close;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.exitToolStripMenuItem.Text = "Cerrar";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // lblVentanillaActual
+            // 
+            this.lblVentanillaActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVentanillaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentanillaActual.ForeColor = System.Drawing.Color.Black;
+            this.lblVentanillaActual.Location = new System.Drawing.Point(3, 25);
+            this.lblVentanillaActual.Name = "lblVentanillaActual";
+            this.lblVentanillaActual.Size = new System.Drawing.Size(312, 60);
+            this.lblVentanillaActual.TabIndex = 10;
+            this.lblVentanillaActual.Text = "Ventanilla B";
+            this.lblVentanillaActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(3, 3);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(3);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(77, 19);
+            this.metroLabel8.TabIndex = 9;
+            this.metroLabel8.Text = "Atendiendo";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(301, 3);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(3);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel2.TabIndex = 11;
+            this.metroLabel2.Text = "Turno";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 400);
+            this.ClientSize = new System.Drawing.Size(802, 400);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabCtrl);
             this.MinimumSize = new System.Drawing.Size(700, 400);
@@ -702,7 +730,6 @@
             this.tableLayoutPanel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBtns.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdWeathers)).EndInit();
             this.tabCtrl.ResumeLayout(false);
@@ -717,6 +744,7 @@
             this.metroTabPage3.ResumeLayout(false);
             this.metroContextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -747,7 +775,6 @@
         private MetroFramework.Controls.MetroLabel lblServicio1Atiende;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Label lblTurnoActual;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -766,6 +793,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.Label lblVentanillaActual;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }
 

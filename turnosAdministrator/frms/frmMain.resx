@@ -123,11 +123,17 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>47</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAGhJREFUSEvt0zEOgDAMA8B8EKHy/x1KHwH20C2hTbMwxNKNsQAZyXhToMKz6IYd
+        zETKO3aYuUA78mCHGb7eCdrhDJZvkFnPAQ207ztjONNIefc5Uz6BduQxnGnkZ8uZxpMzpZzpryLyAojk
+        zN8fk/rsAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="metroStyleExtender1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>183, 17</value>
-  </metadata>
-  <metadata name="metroToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>348, 17</value>
   </metadata>
   <metadata name="metroToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>348, 17</value>
@@ -135,13 +141,17 @@
   <metadata name="metroContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>487, 14</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fileToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAABoSURBVEhL7dMxDoAwDAPAfBCh8v8dSh8B9tAtoU2zMMTS
-        jbEAGcl4U6DCs+iGHcxEyjt2mLlAO/Jghxm+3gna4QyWb5BZzwENtO87YzjTSHn3OVM+gXbkMZxp5GfL
-        mcaTM6Wc6a8i8gKI5MzfH5P67AAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAGtSURBVFhH7ZRPK0RRGMbvHWPtCyjkG8hG4RtYqKFZTD6B
+        FZMlGQtkMpSyk6JsLCQrK1YWwlaJLYWFUiaE59z33Nvp7Zxj3PvOyjz1q7nPed7nvPOnCVpKoc4wDBfA
+        OXgEL+AKLOGsiyLN0zQuegPfDurIzFBUWCivsssU76DOPMWqHhPTGLvgAF4/CDV9yjMz8ApARDkU3hnl
+        zneHs5qRu4WVo5NsGjRKr/HcRrZVeWRu4jyeh8jOprJROEeWW8jNG/kyuRmEohWjsESuVxNxHixrL71Q
+        shYX4rFIrlelOA+q2ksvlPzPBTrACCig5MgorCnPBzLrRv5Q+6pLdTakXgw+GCVS3KO7h67wCMHkI28C
+        v38lCO2yIUm29TVuIfSXBS7AJfN8iC3whegoTUQat2RsiC1wquOJ4J2xjA2xBY51PBG8E5axIbbAB6ID
+        NBFpGN4ny9gQ/RHu6RE1s8/OXMgtgOgsTUQzFX7uQHQB9Rcbq2jLWBD9CiqIdyvwepGduRBdIA0NLbDD
+        hiTZ0td4NWUZFAHdk3SFX+0Ib4Jn8CrEE9hAd56uaClWEPwAA3+tDKRb38EAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

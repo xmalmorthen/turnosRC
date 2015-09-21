@@ -60,6 +60,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,12 +83,26 @@
     <Compile Include="frms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\session.cs" />
     <Compile Include="Models\structures\REST_Service.cs" />
     <Compile Include="Models\structures\strctSession.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <None Include="Properties\DataSources\turnosAdministrator.Models.caWeathers.datasource" />
+    <None Include="Properties\DataSources\turnosAdministrator.Models.DBDataContext.datasource" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Models\DB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\close.png" />
     <None Include="Resources\menu1.png" />
     <None Include="Resources\menu.png" />
@@ -101,6 +116,9 @@
     <EmbeddedResource Include="frms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Models\DB.dbml.layout">
+      <DependentUpon>DB.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -145,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

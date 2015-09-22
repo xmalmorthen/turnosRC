@@ -47,7 +47,6 @@ namespace turnosAdministrator
                 this.Invoke((MethodInvoker)(() => this.DialogResult = DialogResult.OK));
             }
         }
-        
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

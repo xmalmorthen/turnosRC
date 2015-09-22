@@ -132,11 +132,14 @@
         zN8fk/rsAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="metroStyleExtender1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>183, 17</value>
-  </metadata>
   <metadata name="metroToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>348, 17</value>
+  </metadata>
+  <metadata name="strctVentanillaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>839, 14</value>
+  </metadata>
+  <metadata name="metroStyleExtender1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>183, 17</value>
   </metadata>
   <data name="pbNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -153,9 +156,18 @@
   <metadata name="caWeathersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>645, 14</value>
   </metadata>
-  <metadata name="metroToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>348, 17</value>
-  </metadata>
+  <data name="pbRefreshWeatherForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAW1JREFUSEvt1TsvBFEYxvFBKCQIhYglEpS+gC8gqKhU1HqFWzRahUSikqBw60Sj
+        ERQ22Eo0EpEodYREROL6f6xXjjEze2a1+yS/ZPPueefMnJk5E5TynzRjBse4xxvucIQJNKKoVEAHfsZH
+        gkeMoQzeqcIOwgd7x1OoZjahk/LKMtzmA/ShGkoNBnEKd9w8CqYfbpPWOS7lmION1RV2IzE5WMOCCh7Z
+        gvXsqhCXTtjAB9TCJxm8QH2vqEdkRmATrKuQIvuw3h4VojIJGzStQoGMY+3bFaxX78gqVqBV+UnaCfSS
+        XcB6wmbxK8OwPzdU8EgTLuEeWHQFf9IBG6CbXAefaDtxl2gPlYjMCWzgogqeacU1zpH49PXCJhDtR3HR
+        1tCe//mVNrTkfyZnCe4keioGYEvWgCGc4RZdSBWt3zbcSYy9UK4b6GanivYZ7UNxu6fRN2IURUdnNoUs
+        9KHRB0fLcgh9B2K3hVJSJAg+ATq6jitSJeFgAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="metroContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>487, 14</value>
   </metadata>
@@ -170,18 +182,6 @@
         9JcFLsAl83yILfCF6ChNRBq3ZGyILXCq44ngnbGMDbEFjnU8EbwTlrEhtsAHogM0EWkY3ifL2BD9Ee7p
         ETWzz85cyC2A6CxNRDMVfu5AdAH1FxuraMtYEP0KKoh3K/B6kZ25EF0gDQ0tsMOGJNnS13g1ZRkUAd2T
         dIVf7QhvgmfwKsQT2EB3nq5oKVYQ/AADf60MpFvfwQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pbRefreshWeatherForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAW1JREFUSEvt1TsvBFEYxvFBKCQIhYglEpS+gC8gqKhU1HqFWzRahUSikqBw60Sj
-        ERQ22Eo0EpEodYREROL6f6xXjjEze2a1+yS/ZPPueefMnJk5E5TynzRjBse4xxvucIQJNKKoVEAHfsZH
-        gkeMoQzeqcIOwgd7x1OoZjahk/LKMtzmA/ShGkoNBnEKd9w8CqYfbpPWOS7lmION1RV2IzE5WMOCCh7Z
-        gvXsqhCXTtjAB9TCJxm8QH2vqEdkRmATrKuQIvuw3h4VojIJGzStQoGMY+3bFaxX78gqVqBV+UnaCfSS
-        XcB6wmbxK8OwPzdU8EgTLuEeWHQFf9IBG6CbXAefaDtxl2gPlYjMCWzgogqeacU1zpH49PXCJhDtR3HR
-        1tCe//mVNrTkfyZnCe4keioGYEvWgCGc4RZdSBWt3zbcSYy9UK4b6GanivYZ7UNxu6fRN2IURUdnNoUs
-        9KHRB0fLcgh9B2K3hVJSJAg+ATq6jitSJeFgAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

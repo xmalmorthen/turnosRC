@@ -60,5 +60,23 @@ namespace turnosAdministrator.Properties {
                 return ((string)(this["bdTurnosConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10000")]
+        public int RESTRequestTimeOut {
+            get {
+                return ((int)(this["RESTRequestTimeOut"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4000")]
+        public int RESTCallInterval {
+            get {
+                return ((int)(this["RESTCallInterval"]));
+            }
+        }
     }
 }

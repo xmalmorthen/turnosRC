@@ -91,9 +91,14 @@
     <Compile Include="Models\session.cs" />
     <Compile Include="Models\structures\REST_Service.cs" />
     <Compile Include="Models\structures\strctSession.cs" />
+    <Compile Include="Models\structures\strctTurno.cs" />
+    <Compile Include="Models\structures\strctVentanilla.cs" />
+    <Compile Include="Models\mainModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <None Include="Resources\refresh2.png" />
+    <None Include="Properties\DataSources\turnosAdministrator.Models.structures.strctVentanilla.datasource" />
     <None Include="Resources\edit.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\add.png" />

@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using turnosAdministrator.Models;
+using turnosAdministrator.Models.structures;
+using System.Threading;
 
 namespace turnosAdministrator
 {
@@ -176,6 +178,10 @@ namespace turnosAdministrator
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            strctVentanillaBindingSource.DataSource = mainModel.ventanillas();
+            Thread actTurnos = new Thread(actualizarTurnos);
+            actTurnos.Start();
+            
             FrmState = frmStates.displayWeather;
         }
 
@@ -206,7 +212,49 @@ namespace turnosAdministrator
         
         private void pbEditWeatherForm_Click(object sender, EventArgs e)
         {
-            FrmState = frmStates.editWeather;            
+            FrmState = frmStates.editWeather;
+        }
+
+        private void pbActualizarTurnos_Click(object sender, EventArgs e)
+        {
+            Thread actTurnos = new Thread(actualizarTurnos);
+            actTurnos.Start();
+        }
+
+        private void actualizarTurnos()
+        {
+            metroPanel1.Invoke((MethodInvoker)(() => metroPanel1.Enabled = false));
+            pnlNotifications.Invoke((MethodInvoker)(() => pnlNotifications.Visible = true));
+            try
+            {
+                short iter = 0;
+                foreach (strctTurno item in mainModel.turnos())
+                {
+                    switch (iter)
+                    {
+                        case 0:
+                            lblVentanillaActual.Invoke((MethodInvoker)(() => lblVentanillaActual.Text = item.NombreVentanilla));
+                            lblTurnoActual.Invoke((MethodInvoker)(() => lblTurnoActual.Text = item.Turno.ToString()));
+                            break;
+                        case 1:
+                            lblVentanilla1Atiende.Invoke((MethodInvoker)(() => lblVentanilla1Atiende.Text = item.NombreVentanilla));
+                            lblTurno1Atiende.Invoke((MethodInvoker)(() => lblTurno1Atiende.Text = item.Turno.ToString()));
+                            lblServicio1Atiende.Invoke((MethodInvoker)(() => lblServicio1Atiende.Text = item.Tramite));
+                            break;
+                        case 2:
+                            lblVentanilla2Atiende.Invoke((MethodInvoker)(() => lblVentanilla2Atiende.Text = item.NombreVentanilla));
+                            lblTurno2Atiende.Invoke((MethodInvoker)(() => lblTurno2Atiende.Text = item.Turno.ToString()));
+                            lblServicio2Atiende.Invoke((MethodInvoker)(() => lblServicio2Atiende.Text = item.Tramite));
+                            break;
+                    }
+                    iter++;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            pnlNotifications.Invoke((MethodInvoker)(() => pnlNotifications.Visible = false));
+            metroPanel1.Invoke((MethodInvoker)(() => metroPanel1.Enabled = true));
         }
 
     }

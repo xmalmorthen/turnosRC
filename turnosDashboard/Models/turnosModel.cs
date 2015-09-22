@@ -11,15 +11,18 @@ namespace turnosDashboard.Models
 {
     static class turnosModel
     {
+        private static string wsRESTFullRC = string.Format("{0}/{1}/", turnosDashboard.Properties.Settings.Default.ApiRestCitasRC, turnosDashboard.Properties.Settings.Default.VersionApiRestCitasRC);
+        private static RestClient client = new RestClient(wsRESTFullRC);
+
         private static Boolean turnoChanged = false;
         public static Boolean TurnoChanged
         {
             get { return turnosModel.turnoChanged; }
             set { 
                 turnosModel.turnoChanged = value;
-                if (value == true) {
+                /*if (value == true) {
                     Program.main.refreshControls();
-                }
+                }*/
             }
         }
 
@@ -40,12 +43,8 @@ namespace turnosDashboard.Models
         private static RestRequestAsyncHandle asyncHandle;
         public static Boolean turnoState(){
             try
-            {
-                string wsRESTFullRC = string.Format("{0}/{1}/", turnosDashboard.Properties.Settings.Default.ApiRestCitasRC, turnosDashboard.Properties.Settings.Default.VersionApiRestCitasRC);
-
-                RestClient client = new RestClient(wsRESTFullRC);
+            {                
                 client.Timeout = turnosDashboard.Properties.Settings.Default.RESTRequestTimeOut;
-
                 // client.Authenticator = new HttpBasicAuthenticator(username, password);
 
                 string method = string.Format("{0}?Oficina={1}","obtener/turno",turnosDashboard.Properties.Settings.Default.IdOficina.ToString().Trim());
@@ -94,14 +93,54 @@ namespace turnosDashboard.Models
             return true;
         }
 
+        private static RestRequestAsyncHandle asyncHandle3Turnos;
         private static void changeTurno(int turno, string ventanilla, string tramite) {
-            if (TurnoActual.Turno != 0)
+            
+            TurnosAtendiendo.Clear();
+
+            try
             {
-                turno item = new turno();
-                item.Turno = TurnoActual.Turno;
-                item.Ventanilla = TurnoActual.Ventanilla;
-                item.Tramite = TurnoActual.Tramite;
-                TurnosAtendiendo.Add(item);
+                client.Timeout = turnosDashboard.Properties.Settings.Default.RESTRequestTimeOut;
+                // client.Authenticator = new HttpBasicAuthenticator(username, password);
+
+                string method = string.Format("{0}?Oficina={1}", "obtener/ultimos3turnos", turnosDashboard.Properties.Settings.Default.IdOficina.ToString().Trim());
+
+                var request = new RestRequest(method, Method.GET);
+                request.AddHeader("Accept", "application/json");
+
+                try
+                {
+                    asyncHandle3Turnos.Abort();
+                }
+                catch (Exception) { }
+
+                asyncHandle3Turnos = client.ExecuteAsync<RESTTurno>(request, response =>
+                {
+                    if (response.ResponseStatus == ResponseStatus.Completed)
+                    {
+                        if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
+                        {
+                            short cont = 0;
+                            foreach (strctTurno item in response.Data.response)
+	                        {
+                                if (cont > 0) {                
+                                    turno _item = new turno();
+                                    _item.Turno = item.Turno;
+                                    _item.Ventanilla = item.NombreVentanilla;
+                                    _item.Tramite = item.Tramite;
+                                    TurnosAtendiendo.Add(_item);
+                                }
+                                cont++;
+	                        }
+                            Program.main.refreshControls();
+                        }
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Logger logger = LogManager.GetCurrentClassLogger();
+                logger.Error(ex, ex.Message);
             }
 
             TurnoActual.Turno = turno;

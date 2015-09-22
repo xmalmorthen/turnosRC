@@ -30,29 +30,25 @@ namespace turnosAdministrator
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlWeatherForm = new System.Windows.Forms.Panel();
             this.pbNew = new System.Windows.Forms.PictureBox();
             this.txtWeatherDescrip = new MetroFramework.Controls.MetroTextBox();
+            this.caWeathersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.txtWeather = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.pnlBtns = new System.Windows.Forms.Panel();
             this.btnCancelWeatherForm = new MetroFramework.Controls.MetroButton();
             this.btnAcceptWeatherForm = new MetroFramework.Controls.MetroButton();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.gdWeathers = new MetroFramework.Controls.MetroGrid();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pbRefreshWeatherForm = new System.Windows.Forms.PictureBox();
-            this.pbDeleteWeatherForm = new System.Windows.Forms.PictureBox();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.tabCtrl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
@@ -83,26 +79,27 @@ namespace turnosAdministrator
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.caWeathersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weatherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fInsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pbDeleteWeatherForm = new System.Windows.Forms.PictureBox();
+            this.pbRefreshWeatherForm = new System.Windows.Forms.PictureBox();
+            this.pbEditWeatherForm = new System.Windows.Forms.PictureBox();
+            this.gdWeathers = new MetroFramework.Controls.MetroGrid();
             this.factDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fInsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weatherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlWeatherForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.caWeathersBindingSource)).BeginInit();
             this.pnlBtns.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdWeathers)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRefreshWeatherForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteWeatherForm)).BeginInit();
             this.tabCtrl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -112,7 +109,12 @@ namespace turnosAdministrator
             this.metroTabPage3.SuspendLayout();
             this.metroContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.caWeathersBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteWeatherForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefreshWeatherForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditWeatherForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdWeathers)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroStyleManager
@@ -129,7 +131,6 @@ namespace turnosAdministrator
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(3, 10);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.splitContainer1.MaximumSize = new System.Drawing.Size(748, 262);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -141,8 +142,8 @@ namespace turnosAdministrator
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel3);
             this.splitContainer1.Panel2MinSize = 265;
-            this.splitContainer1.Size = new System.Drawing.Size(748, 262);
-            this.splitContainer1.SplitterDistance = 435;
+            this.splitContainer1.Size = new System.Drawing.Size(947, 262);
+            this.splitContainer1.SplitterDistance = 376;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -150,7 +151,7 @@ namespace turnosAdministrator
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.pnlWeatherForm, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.pnlBtns, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
@@ -158,31 +159,32 @@ namespace turnosAdministrator
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(433, 260);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(374, 260);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // panel1
+            // pnlWeatherForm
             // 
-            this.panel1.Controls.Add(this.pbNew);
-            this.panel1.Controls.Add(this.txtWeatherDescrip);
-            this.panel1.Controls.Add(this.metroLabel7);
-            this.panel1.Controls.Add(this.txtWeather);
-            this.panel1.Controls.Add(this.metroLabel6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 219);
-            this.panel1.TabIndex = 0;
+            this.pnlWeatherForm.Controls.Add(this.pbNew);
+            this.pnlWeatherForm.Controls.Add(this.txtWeatherDescrip);
+            this.pnlWeatherForm.Controls.Add(this.metroLabel7);
+            this.pnlWeatherForm.Controls.Add(this.txtWeather);
+            this.pnlWeatherForm.Controls.Add(this.metroLabel6);
+            this.pnlWeatherForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlWeatherForm.Location = new System.Drawing.Point(3, 3);
+            this.pnlWeatherForm.Name = "pnlWeatherForm";
+            this.pnlWeatherForm.Size = new System.Drawing.Size(368, 219);
+            this.pnlWeatherForm.TabIndex = 0;
             // 
             // pbNew
             // 
             this.pbNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroStyleExtender1.SetApplyMetroTheme(this.pbNew, true);
             this.pbNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbNew.Image = global::turnosAdministrator.Properties.Resources.add;
-            this.pbNew.Location = new System.Drawing.Point(398, 17);
+            this.pbNew.Image = ((System.Drawing.Image)(resources.GetObject("pbNew.Image")));
+            this.pbNew.Location = new System.Drawing.Point(338, 14);
             this.pbNew.Name = "pbNew";
             this.pbNew.Size = new System.Drawing.Size(24, 24);
+            this.pbNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNew.TabIndex = 4;
             this.pbNew.TabStop = false;
             this.metroToolTip1.SetToolTip(this.pbNew, "Nuevo municipio o ciudad");
@@ -198,7 +200,7 @@ namespace turnosAdministrator
             // 
             // 
             this.txtWeatherDescrip.CustomButton.Image = null;
-            this.txtWeatherDescrip.CustomButton.Location = new System.Drawing.Point(321, 2);
+            this.txtWeatherDescrip.CustomButton.Location = new System.Drawing.Point(264, 2);
             this.txtWeatherDescrip.CustomButton.Name = "";
             this.txtWeatherDescrip.CustomButton.Size = new System.Drawing.Size(93, 93);
             this.txtWeatherDescrip.CustomButton.Style = MetroFramework.MetroColorStyle.Silver;
@@ -219,12 +221,15 @@ namespace turnosAdministrator
             this.txtWeatherDescrip.SelectionLength = 0;
             this.txtWeatherDescrip.SelectionStart = 0;
             this.txtWeatherDescrip.ShowClearButton = true;
-            this.txtWeatherDescrip.Size = new System.Drawing.Size(417, 98);
+            this.txtWeatherDescrip.Size = new System.Drawing.Size(360, 98);
             this.txtWeatherDescrip.TabIndex = 3;
             this.txtWeatherDescrip.UseSelectable = true;
             this.txtWeatherDescrip.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtWeatherDescrip.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtWeatherDescrip.Enter += new System.EventHandler(this.txtWeatherDescrip_Enter);
+            // 
+            // caWeathersBindingSource
+            // 
+            this.caWeathersBindingSource.DataSource = typeof(turnosAdministrator.Models.caWeathers);
             // 
             // metroLabel7
             // 
@@ -245,7 +250,7 @@ namespace turnosAdministrator
             // 
             // 
             this.txtWeather.CustomButton.Image = null;
-            this.txtWeather.CustomButton.Location = new System.Drawing.Point(389, 2);
+            this.txtWeather.CustomButton.Location = new System.Drawing.Point(332, 2);
             this.txtWeather.CustomButton.Name = "";
             this.txtWeather.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtWeather.CustomButton.Style = MetroFramework.MetroColorStyle.Silver;
@@ -254,10 +259,8 @@ namespace turnosAdministrator
             this.txtWeather.CustomButton.UseSelectable = true;
             this.txtWeather.CustomButton.Visible = false;
             this.txtWeather.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.caWeathersBindingSource, "weather", true));
-            this.txtWeather.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.caWeathersBindingSource, "fIns", true));
             this.txtWeather.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtWeather.Lines = new string[] {
-        "Colima"};
+            this.txtWeather.Lines = new string[0];
             this.txtWeather.Location = new System.Drawing.Point(5, 46);
             this.txtWeather.Margin = new System.Windows.Forms.Padding(5, 0, 5, 3);
             this.txtWeather.MaxLength = 32767;
@@ -268,13 +271,11 @@ namespace turnosAdministrator
             this.txtWeather.SelectionLength = 0;
             this.txtWeather.SelectionStart = 0;
             this.txtWeather.ShowClearButton = true;
-            this.txtWeather.Size = new System.Drawing.Size(417, 30);
+            this.txtWeather.Size = new System.Drawing.Size(360, 30);
             this.txtWeather.TabIndex = 1;
-            this.txtWeather.Text = "Colima";
             this.txtWeather.UseSelectable = true;
             this.txtWeather.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtWeather.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtWeather.Enter += new System.EventHandler(this.txtWeatherDescrip_Enter);
             // 
             // metroLabel6
             // 
@@ -294,13 +295,13 @@ namespace turnosAdministrator
             this.pnlBtns.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBtns.Location = new System.Drawing.Point(3, 228);
             this.pnlBtns.Name = "pnlBtns";
-            this.pnlBtns.Size = new System.Drawing.Size(427, 29);
+            this.pnlBtns.Size = new System.Drawing.Size(368, 29);
             this.pnlBtns.TabIndex = 1;
             // 
             // btnCancelWeatherForm
             // 
             this.btnCancelWeatherForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelWeatherForm.Location = new System.Drawing.Point(347, 3);
+            this.btnCancelWeatherForm.Location = new System.Drawing.Point(290, 3);
             this.btnCancelWeatherForm.Name = "btnCancelWeatherForm";
             this.btnCancelWeatherForm.Size = new System.Drawing.Size(75, 23);
             this.btnCancelWeatherForm.TabIndex = 2;
@@ -312,7 +313,7 @@ namespace turnosAdministrator
             // btnAcceptWeatherForm
             // 
             this.btnAcceptWeatherForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAcceptWeatherForm.Location = new System.Drawing.Point(266, 3);
+            this.btnAcceptWeatherForm.Location = new System.Drawing.Point(209, 3);
             this.btnAcceptWeatherForm.Name = "btnAcceptWeatherForm";
             this.btnAcceptWeatherForm.Size = new System.Drawing.Size(75, 23);
             this.btnAcceptWeatherForm.TabIndex = 1;
@@ -320,121 +321,6 @@ namespace turnosAdministrator
             this.metroToolTip1.SetToolTip(this.btnAcceptWeatherForm, "Agregar municipio o ciudad a la lista");
             this.btnAcceptWeatherForm.UseSelectable = true;
             this.btnAcceptWeatherForm.Click += new System.EventHandler(this.btnAcceptWeatherForm_Click);
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.gdWeathers, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(305, 260);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // gdWeathers
-            // 
-            this.gdWeathers.AllowUserToAddRows = false;
-            this.gdWeathers.AllowUserToDeleteRows = false;
-            this.gdWeathers.AllowUserToOrderColumns = true;
-            this.gdWeathers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.gdWeathers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
-            this.gdWeathers.AutoGenerateColumns = false;
-            this.gdWeathers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gdWeathers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gdWeathers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gdWeathers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            this.gdWeathers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdWeathers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.weatherDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.fInsDataGridViewTextBoxColumn,
-            this.factDataGridViewTextBoxColumn});
-            this.gdWeathers.DataSource = this.caWeathersBindingSource;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle23;
-            this.gdWeathers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdWeathers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.gdWeathers.EnableHeadersVisualStyles = false;
-            this.gdWeathers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.gdWeathers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gdWeathers.Location = new System.Drawing.Point(3, 3);
-            this.gdWeathers.MultiSelect = false;
-            this.gdWeathers.Name = "gdWeathers";
-            this.gdWeathers.ReadOnly = true;
-            this.gdWeathers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.gdWeathers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.gdWeathers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdWeathers.ShowCellErrors = false;
-            this.gdWeathers.ShowEditingIcon = false;
-            this.gdWeathers.ShowRowErrors = false;
-            this.gdWeathers.Size = new System.Drawing.Size(269, 254);
-            this.gdWeathers.StandardTab = true;
-            this.gdWeathers.TabIndex = 2;
-            this.gdWeathers.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdWeathers_CellEnter);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pbRefreshWeatherForm);
-            this.panel2.Controls.Add(this.pbDeleteWeatherForm);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(275, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(30, 260);
-            this.panel2.TabIndex = 3;
-            // 
-            // pbRefreshWeatherForm
-            // 
-            this.pbRefreshWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbRefreshWeatherForm.Image = global::turnosAdministrator.Properties.Resources.refresh;
-            this.pbRefreshWeatherForm.Location = new System.Drawing.Point(3, 4);
-            this.pbRefreshWeatherForm.Name = "pbRefreshWeatherForm";
-            this.pbRefreshWeatherForm.Size = new System.Drawing.Size(24, 24);
-            this.pbRefreshWeatherForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbRefreshWeatherForm.TabIndex = 1;
-            this.pbRefreshWeatherForm.TabStop = false;
-            // 
-            // pbDeleteWeatherForm
-            // 
-            this.pbDeleteWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbDeleteWeatherForm.Image = global::turnosAdministrator.Properties.Resources.delete;
-            this.pbDeleteWeatherForm.Location = new System.Drawing.Point(3, 233);
-            this.pbDeleteWeatherForm.Name = "pbDeleteWeatherForm";
-            this.pbDeleteWeatherForm.Size = new System.Drawing.Size(24, 24);
-            this.pbDeleteWeatherForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbDeleteWeatherForm.TabIndex = 0;
-            this.pbDeleteWeatherForm.TabStop = false;
-            this.pbDeleteWeatherForm.Click += new System.EventHandler(this.pbDeleteWeatherForm_Click);
             // 
             // metroToolTip1
             // 
@@ -450,8 +336,8 @@ namespace turnosAdministrator
             this.tabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCtrl.Location = new System.Drawing.Point(20, 60);
             this.tabCtrl.Name = "tabCtrl";
-            this.tabCtrl.SelectedIndex = 2;
-            this.tabCtrl.Size = new System.Drawing.Size(762, 320);
+            this.tabCtrl.SelectedIndex = 0;
+            this.tabCtrl.Size = new System.Drawing.Size(961, 320);
             this.tabCtrl.Style = MetroFramework.MetroColorStyle.Silver;
             this.tabCtrl.TabIndex = 0;
             this.tabCtrl.UseSelectable = true;
@@ -468,7 +354,7 @@ namespace turnosAdministrator
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(754, 278);
+            this.metroTabPage1.Size = new System.Drawing.Size(953, 278);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Toma de Turnos";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -500,7 +386,7 @@ namespace turnosAdministrator
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(734, 160);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(940, 160);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTurno2Atiende
@@ -529,7 +415,7 @@ namespace turnosAdministrator
             this.lblServicio2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblServicio2Atiende.Location = new System.Drawing.Point(142, 94);
             this.lblServicio2Atiende.Name = "lblServicio2Atiende";
-            this.lblServicio2Atiende.Size = new System.Drawing.Size(587, 64);
+            this.lblServicio2Atiende.Size = new System.Drawing.Size(793, 64);
             this.lblServicio2Atiende.TabIndex = 16;
             this.lblServicio2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -565,7 +451,7 @@ namespace turnosAdministrator
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel5.Location = new System.Drawing.Point(142, 2);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(587, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(793, 25);
             this.metroLabel5.TabIndex = 10;
             this.metroLabel5.Text = "Servicio";
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -596,7 +482,7 @@ namespace turnosAdministrator
             this.lblServicio1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblServicio1Atiende.Location = new System.Drawing.Point(142, 29);
             this.lblServicio1Atiende.Name = "lblServicio1Atiende";
-            this.lblServicio1Atiende.Size = new System.Drawing.Size(587, 63);
+            this.lblServicio1Atiende.Size = new System.Drawing.Size(793, 63);
             this.lblServicio1Atiende.TabIndex = 13;
             this.lblServicio1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -615,7 +501,7 @@ namespace turnosAdministrator
             this.metroPanel2.Location = new System.Drawing.Point(305, 10);
             this.metroPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(439, 92);
+            this.metroPanel2.Size = new System.Drawing.Size(645, 92);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -623,9 +509,9 @@ namespace turnosAdministrator
             // 
             // metroLabel2
             // 
-            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(301, 3);
+            this.metroLabel2.Location = new System.Drawing.Point(501, 3);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(41, 19);
@@ -639,7 +525,7 @@ namespace turnosAdministrator
             this.lblVentanillaActual.ForeColor = System.Drawing.Color.Black;
             this.lblVentanillaActual.Location = new System.Drawing.Point(3, 25);
             this.lblVentanillaActual.Name = "lblVentanillaActual";
-            this.lblVentanillaActual.Size = new System.Drawing.Size(312, 60);
+            this.lblVentanillaActual.Size = new System.Drawing.Size(518, 60);
             this.lblVentanillaActual.TabIndex = 10;
             this.lblVentanillaActual.Text = "Ventanilla B";
             this.lblVentanillaActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -660,7 +546,7 @@ namespace turnosAdministrator
             this.lblTurnoActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTurnoActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnoActual.ForeColor = System.Drawing.Color.Red;
-            this.lblTurnoActual.Location = new System.Drawing.Point(321, 14);
+            this.lblTurnoActual.Location = new System.Drawing.Point(527, 14);
             this.lblTurnoActual.Name = "lblTurnoActual";
             this.lblTurnoActual.Size = new System.Drawing.Size(112, 61);
             this.lblTurnoActual.TabIndex = 8;
@@ -699,6 +585,7 @@ namespace turnosAdministrator
             // btnTurnoSiguiente
             // 
             this.btnTurnoSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTurnoSiguiente.ForeColor = System.Drawing.Color.Red;
             this.btnTurnoSiguiente.Location = new System.Drawing.Point(128, 61);
             this.btnTurnoSiguiente.Margin = new System.Windows.Forms.Padding(5);
             this.btnTurnoSiguiente.Name = "btnTurnoSiguiente";
@@ -728,7 +615,7 @@ namespace turnosAdministrator
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(754, 278);
+            this.metroTabPage2.Size = new System.Drawing.Size(669, 278);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Administración de videos";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -746,7 +633,7 @@ namespace turnosAdministrator
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(754, 278);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(669, 278);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // metroTabPage3
@@ -755,7 +642,7 @@ namespace turnosAdministrator
             this.metroTabPage3.Controls.Add(this.splitContainer1);
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(754, 278);
+            this.metroTabPage3.Size = new System.Drawing.Size(953, 278);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Administracón de Clima";
             // 
@@ -795,7 +682,7 @@ namespace turnosAdministrator
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(751, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(950, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -803,37 +690,121 @@ namespace turnosAdministrator
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // caWeathersBindingSource
+            // panel2
             // 
-            this.caWeathersBindingSource.DataSource = typeof(turnosAdministrator.Models.caWeathers);
+            this.panel2.Controls.Add(this.pbEditWeatherForm);
+            this.panel2.Controls.Add(this.pbRefreshWeatherForm);
+            this.panel2.Controls.Add(this.pbDeleteWeatherForm);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(533, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(30, 260);
+            this.panel2.TabIndex = 3;
             // 
-            // idDataGridViewTextBoxColumn
+            // pbDeleteWeatherForm
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pbDeleteWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbDeleteWeatherForm.Image = global::turnosAdministrator.Properties.Resources.delete;
+            this.pbDeleteWeatherForm.Location = new System.Drawing.Point(3, 233);
+            this.pbDeleteWeatherForm.Name = "pbDeleteWeatherForm";
+            this.pbDeleteWeatherForm.Size = new System.Drawing.Size(24, 24);
+            this.pbDeleteWeatherForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbDeleteWeatherForm.TabIndex = 0;
+            this.pbDeleteWeatherForm.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbDeleteWeatherForm, "Eliminar registro");
+            this.pbDeleteWeatherForm.Click += new System.EventHandler(this.pbDeleteWeatherForm_Click);
             // 
-            // weatherDataGridViewTextBoxColumn
+            // pbRefreshWeatherForm
             // 
-            this.weatherDataGridViewTextBoxColumn.DataPropertyName = "weather";
-            this.weatherDataGridViewTextBoxColumn.HeaderText = "weather";
-            this.weatherDataGridViewTextBoxColumn.Name = "weatherDataGridViewTextBoxColumn";
-            this.weatherDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pbRefreshWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRefreshWeatherForm.Image = ((System.Drawing.Image)(resources.GetObject("pbRefreshWeatherForm.Image")));
+            this.pbRefreshWeatherForm.Location = new System.Drawing.Point(3, 4);
+            this.pbRefreshWeatherForm.Name = "pbRefreshWeatherForm";
+            this.pbRefreshWeatherForm.Size = new System.Drawing.Size(24, 24);
+            this.pbRefreshWeatherForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbRefreshWeatherForm.TabIndex = 1;
+            this.pbRefreshWeatherForm.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbRefreshWeatherForm, "Actualizar lista de registros");
+            this.pbRefreshWeatherForm.Click += new System.EventHandler(this.pbRefreshWeatherForm_Click);
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // pbEditWeatherForm
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pbEditWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEditWeatherForm.Image = global::turnosAdministrator.Properties.Resources.edit;
+            this.pbEditWeatherForm.Location = new System.Drawing.Point(3, 34);
+            this.pbEditWeatherForm.Name = "pbEditWeatherForm";
+            this.pbEditWeatherForm.Size = new System.Drawing.Size(24, 24);
+            this.pbEditWeatherForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEditWeatherForm.TabIndex = 2;
+            this.pbEditWeatherForm.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbEditWeatherForm, "Editar registro");
+            this.pbEditWeatherForm.Click += new System.EventHandler(this.pbEditWeatherForm_Click);
             // 
-            // fInsDataGridViewTextBoxColumn
+            // gdWeathers
             // 
-            this.fInsDataGridViewTextBoxColumn.DataPropertyName = "fIns";
-            this.fInsDataGridViewTextBoxColumn.HeaderText = "fIns";
-            this.fInsDataGridViewTextBoxColumn.Name = "fInsDataGridViewTextBoxColumn";
-            this.fInsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gdWeathers.AllowUserToAddRows = false;
+            this.gdWeathers.AllowUserToDeleteRows = false;
+            this.gdWeathers.AllowUserToOrderColumns = true;
+            this.gdWeathers.AllowUserToResizeRows = false;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.gdWeathers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.gdWeathers.AutoGenerateColumns = false;
+            this.gdWeathers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gdWeathers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gdWeathers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gdWeathers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.gdWeathers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdWeathers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.weatherDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.fInsDataGridViewTextBoxColumn,
+            this.factDataGridViewTextBoxColumn});
+            this.gdWeathers.DataSource = this.caWeathersBindingSource;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle11;
+            this.gdWeathers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdWeathers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gdWeathers.EnableHeadersVisualStyles = false;
+            this.gdWeathers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gdWeathers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gdWeathers.Location = new System.Drawing.Point(3, 3);
+            this.gdWeathers.MultiSelect = false;
+            this.gdWeathers.Name = "gdWeathers";
+            this.gdWeathers.ReadOnly = true;
+            this.gdWeathers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.gdWeathers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gdWeathers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gdWeathers.ShowCellErrors = false;
+            this.gdWeathers.ShowEditingIcon = false;
+            this.gdWeathers.ShowRowErrors = false;
+            this.gdWeathers.Size = new System.Drawing.Size(527, 254);
+            this.gdWeathers.StandardTab = true;
+            this.gdWeathers.TabIndex = 2;
+            this.gdWeathers.UseStyleColors = true;
             // 
             // factDataGridViewTextBoxColumn
             // 
@@ -841,14 +812,64 @@ namespace turnosAdministrator
             this.factDataGridViewTextBoxColumn.HeaderText = "fact";
             this.factDataGridViewTextBoxColumn.Name = "factDataGridViewTextBoxColumn";
             this.factDataGridViewTextBoxColumn.ReadOnly = true;
+            this.factDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // fInsDataGridViewTextBoxColumn
+            // 
+            this.fInsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fInsDataGridViewTextBoxColumn.DataPropertyName = "fIns";
+            this.fInsDataGridViewTextBoxColumn.HeaderText = "Fecha/Hora de Inserción";
+            this.fInsDataGridViewTextBoxColumn.Name = "fInsDataGridViewTextBoxColumn";
+            this.fInsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // weatherDataGridViewTextBoxColumn
+            // 
+            this.weatherDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.weatherDataGridViewTextBoxColumn.DataPropertyName = "weather";
+            this.weatherDataGridViewTextBoxColumn.HeaderText = "Municipio/Ciudad";
+            this.weatherDataGridViewTextBoxColumn.Name = "weatherDataGridViewTextBoxColumn";
+            this.weatherDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.Controls.Add(this.gdWeathers, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(563, 260);
+            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 400);
+            this.ClientSize = new System.Drawing.Size(1001, 400);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabCtrl);
+            this.MinimumSize = new System.Drawing.Size(717, 400);
             this.Name = "frmMain";
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Pánel de configuración";
@@ -860,16 +881,11 @@ namespace turnosAdministrator
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlWeatherForm.ResumeLayout(false);
+            this.pnlWeatherForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.caWeathersBindingSource)).EndInit();
             this.pnlBtns.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gdWeathers)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRefreshWeatherForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteWeatherForm)).EndInit();
             this.tabCtrl.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -882,7 +898,13 @@ namespace turnosAdministrator
             this.metroTabPage3.ResumeLayout(false);
             this.metroContextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.caWeathersBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteWeatherForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefreshWeatherForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditWeatherForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdWeathers)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -916,7 +938,7 @@ namespace turnosAdministrator
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlWeatherForm;
         private System.Windows.Forms.PictureBox pbNew;
         private MetroFramework.Controls.MetroTextBox txtWeatherDescrip;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -933,17 +955,18 @@ namespace turnosAdministrator
         private System.Windows.Forms.Label lblVentanillaActual;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroButton btnCancelWeatherForm;
+        private System.Windows.Forms.BindingSource caWeathersBindingSource;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MetroFramework.Controls.MetroGrid gdWeathers;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbRefreshWeatherForm;
-        private System.Windows.Forms.PictureBox pbDeleteWeatherForm;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weatherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fInsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn factDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource caWeathersBindingSource;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pbEditWeatherForm;
+        private System.Windows.Forms.PictureBox pbRefreshWeatherForm;
+        private System.Windows.Forms.PictureBox pbDeleteWeatherForm;
     }
 }
 

@@ -40,7 +40,7 @@ namespace turnosAdministrator
             
             if (!isValid)
             {
-                MetroMessageBox.Show(this, message, "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                MetroMessageBox.Show(this, message, "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

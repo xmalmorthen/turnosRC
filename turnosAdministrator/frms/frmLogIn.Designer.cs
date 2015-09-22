@@ -210,7 +210,7 @@
             // 
             // pbSpnr
             // 
-            this.pbSpnr.Location = new System.Drawing.Point(274, 226);
+            this.pbSpnr.Location = new System.Drawing.Point(274, 223);
             this.pbSpnr.Maximum = 100;
             this.pbSpnr.Name = "pbSpnr";
             this.pbSpnr.Size = new System.Drawing.Size(32, 32);

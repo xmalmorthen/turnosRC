@@ -94,9 +94,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\add.png" />
     <None Include="Properties\DataSources\turnosAdministrator.Models.caWeathers.datasource" />
     <None Include="Properties\DataSources\turnosAdministrator.Models.DBDataContext.datasource" />
-    <None Include="Resources\refresh.png" />
     <None Include="Resources\delete.png" />
     <None Include="Models\DB.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -106,7 +108,6 @@
     <None Include="Resources\close.png" />
     <None Include="Resources\menu1.png" />
     <None Include="Resources\menu.png" />
-    <None Include="Resources\add.png" />
     <None Include="Resources\_lock.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\lock2.png" />

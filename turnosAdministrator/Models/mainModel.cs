@@ -35,6 +35,10 @@ namespace turnosAdministrator.Models
                     {
                         response = new List<strctVentanilla>(ventanillas.Data.response.FindAll(qry => qry.Activa == true));                        
                     }
+                    else
+                    {
+                        throw new Exception(ventanillas.Data.REST_Service.Message.ToString());
+                    }
                 }
                 
             }
@@ -66,6 +70,48 @@ namespace turnosAdministrator.Models
                     if (turnos.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
                     {
                         response = new List<strctTurno>(turnos.Data.response);
+                    }
+                    else
+                    {
+                        throw new Exception(turnos.Data.REST_Service.Message.ToString());
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Logger logger = LogManager.GetCurrentClassLogger();
+                logger.Error(ex, ex.Message);
+            }
+            return response;
+        }
+
+        public static strctTurno siguienteTurno(int idVentanilla)
+        {
+            strctTurno response = null;
+            try
+            {
+                client.Timeout = turnosAdministrator.Properties.Settings.Default.RESTRequestTimeOut;
+                // client.Authenticator = new HttpBasicAuthenticator(username, password);
+
+                string method = string.Format("{0}", "cita/siguiente_turno");
+
+                var request = new RestRequest(method, Method.POST);
+                request.AddParameter("Ventanilla",idVentanilla);
+                request.AddParameter("Oficina",turnosAdministrator.Properties.Settings.Default.IdOficina.ToString().Trim());
+
+                request.AddHeader("Accept", "application/json");
+
+                RestResponse<RESTTurno> turnos = client.Execute<RESTTurno>(request) as RestResponse<RESTTurno>;
+
+                if (turnos.ResponseStatus == ResponseStatus.Completed)
+                {
+                    if (turnos.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
+                    {
+                        response = turnos.Data.response.SingleOrDefault();
+                    }
+                    else {
+                        throw new Exception(turnos.Data.REST_Service.Message.ToString());
                     }
                 }
 

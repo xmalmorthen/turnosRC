@@ -42,6 +42,10 @@ namespace turnosAdministrator.Models
                                 response = true;
                             }
                         }
+                        else
+                        {
+                            throw new Exception(RestResponse.Data.REST_Service.Message.ToString());
+                        }
                     }
                     callBack(response, message);
                 });

@@ -252,10 +252,27 @@ namespace turnosAdministrator
             }
             catch (Exception)
             {
+                lblVentanillaActual.Invoke((MethodInvoker)(() => lblVentanillaActual.Text = "No se encuntraron citas para hoy"));
             }
             pnlNotifications.Invoke((MethodInvoker)(() => pnlNotifications.Visible = false));
             metroPanel1.Invoke((MethodInvoker)(() => metroPanel1.Enabled = true));
         }
 
+        private void btnTurnoSiguiente_Click(object sender, EventArgs e)
+        {
+            Thread sigTurno = new Thread(siguienteTurno);
+            sigTurno.Start();            
+        }
+
+        private void siguienteTurno() {
+            metroPanel1.Invoke((MethodInvoker)(() => metroPanel1.Enabled = false));
+            pnlNotifications.Invoke((MethodInvoker)(() => pnlNotifications.Visible = true));
+           
+            mainModel.siguienteTurno(((strctVentanilla)strctVentanillaBindingSource.Current).ID_Ventanilla);
+            pbActualizarTurnos_Click(null, null);
+
+            pnlNotifications.Invoke((MethodInvoker)(() => pnlNotifications.Visible = false));
+            metroPanel1.Invoke((MethodInvoker)(() => metroPanel1.Enabled = true));
+        }
     }
 }

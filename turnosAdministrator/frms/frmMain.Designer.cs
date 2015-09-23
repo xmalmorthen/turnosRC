@@ -30,10 +30,10 @@ namespace turnosAdministrator
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
@@ -352,21 +352,21 @@ namespace turnosAdministrator
             this.gdWeathers.AllowUserToDeleteRows = false;
             this.gdWeathers.AllowUserToOrderColumns = true;
             this.gdWeathers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.gdWeathers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.gdWeathers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.gdWeathers.AutoGenerateColumns = false;
             this.gdWeathers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gdWeathers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdWeathers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gdWeathers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.gdWeathers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdWeathers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -375,14 +375,14 @@ namespace turnosAdministrator
             this.fInsDataGridViewTextBoxColumn,
             this.factDataGridViewTextBoxColumn});
             this.gdWeathers.DataSource = this.caWeathersBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle19;
             this.gdWeathers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdWeathers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gdWeathers.EnableHeadersVisualStyles = false;
@@ -393,14 +393,14 @@ namespace turnosAdministrator
             this.gdWeathers.Name = "gdWeathers";
             this.gdWeathers.ReadOnly = true;
             this.gdWeathers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.gdWeathers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gdWeathers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gdWeathers.ShowCellErrors = false;
@@ -511,12 +511,13 @@ namespace turnosAdministrator
             // pbActualizarTurnos
             // 
             this.pbActualizarTurnos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbActualizarTurnos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbActualizarTurnos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizarTurnos.Image = global::turnosAdministrator.Properties.Resources.refresh2;
             this.pbActualizarTurnos.Location = new System.Drawing.Point(857, 9);
             this.pbActualizarTurnos.Name = "pbActualizarTurnos";
-            this.pbActualizarTurnos.Size = new System.Drawing.Size(93, 93);
-            this.pbActualizarTurnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbActualizarTurnos.Size = new System.Drawing.Size(93, 118);
+            this.pbActualizarTurnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbActualizarTurnos.TabIndex = 7;
             this.pbActualizarTurnos.TabStop = false;
             this.metroToolTip1.SetToolTip(this.pbActualizarTurnos, "Actualizar turnos");
@@ -531,7 +532,7 @@ namespace turnosAdministrator
             this.tabCtrl.Location = new System.Drawing.Point(20, 60);
             this.tabCtrl.Name = "tabCtrl";
             this.tabCtrl.SelectedIndex = 0;
-            this.tabCtrl.Size = new System.Drawing.Size(961, 320);
+            this.tabCtrl.Size = new System.Drawing.Size(961, 365);
             this.tabCtrl.Style = MetroFramework.MetroColorStyle.Silver;
             this.tabCtrl.TabIndex = 0;
             this.tabCtrl.UseSelectable = true;
@@ -549,7 +550,7 @@ namespace turnosAdministrator
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(953, 278);
+            this.metroTabPage1.Size = new System.Drawing.Size(953, 323);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Toma de Turnos";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -575,22 +576,22 @@ namespace turnosAdministrator
             this.tableLayoutPanel1.Controls.Add(this.lblTurno1Atiende, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblVentanilla1Atiende, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblServicio1Atiende, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 115);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 131);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(940, 160);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(940, 189);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTurno2Atiende
             // 
             this.lblTurno2Atiende.AutoSize = true;
             this.lblTurno2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTurno2Atiende.Location = new System.Drawing.Point(5, 94);
+            this.lblTurno2Atiende.Location = new System.Drawing.Point(5, 109);
             this.lblTurno2Atiende.Name = "lblTurno2Atiende";
-            this.lblTurno2Atiende.Size = new System.Drawing.Size(47, 64);
+            this.lblTurno2Atiende.Size = new System.Drawing.Size(47, 78);
             this.lblTurno2Atiende.TabIndex = 14;
             this.lblTurno2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -598,9 +599,9 @@ namespace turnosAdministrator
             // 
             this.lblVentanilla2Atiende.AutoSize = true;
             this.lblVentanilla2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVentanilla2Atiende.Location = new System.Drawing.Point(60, 94);
+            this.lblVentanilla2Atiende.Location = new System.Drawing.Point(60, 109);
             this.lblVentanilla2Atiende.Name = "lblVentanilla2Atiende";
-            this.lblVentanilla2Atiende.Size = new System.Drawing.Size(74, 64);
+            this.lblVentanilla2Atiende.Size = new System.Drawing.Size(74, 78);
             this.lblVentanilla2Atiende.TabIndex = 15;
             this.lblVentanilla2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -608,9 +609,9 @@ namespace turnosAdministrator
             // 
             this.lblServicio2Atiende.AutoSize = true;
             this.lblServicio2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblServicio2Atiende.Location = new System.Drawing.Point(142, 94);
+            this.lblServicio2Atiende.Location = new System.Drawing.Point(142, 109);
             this.lblServicio2Atiende.Name = "lblServicio2Atiende";
-            this.lblServicio2Atiende.Size = new System.Drawing.Size(793, 64);
+            this.lblServicio2Atiende.Size = new System.Drawing.Size(793, 78);
             this.lblServicio2Atiende.TabIndex = 16;
             this.lblServicio2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -657,7 +658,7 @@ namespace turnosAdministrator
             this.lblTurno1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTurno1Atiende.Location = new System.Drawing.Point(5, 29);
             this.lblTurno1Atiende.Name = "lblTurno1Atiende";
-            this.lblTurno1Atiende.Size = new System.Drawing.Size(47, 63);
+            this.lblTurno1Atiende.Size = new System.Drawing.Size(47, 78);
             this.lblTurno1Atiende.TabIndex = 11;
             this.lblTurno1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -667,7 +668,7 @@ namespace turnosAdministrator
             this.lblVentanilla1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVentanilla1Atiende.Location = new System.Drawing.Point(60, 29);
             this.lblVentanilla1Atiende.Name = "lblVentanilla1Atiende";
-            this.lblVentanilla1Atiende.Size = new System.Drawing.Size(74, 63);
+            this.lblVentanilla1Atiende.Size = new System.Drawing.Size(74, 78);
             this.lblVentanilla1Atiende.TabIndex = 12;
             this.lblVentanilla1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -677,7 +678,7 @@ namespace turnosAdministrator
             this.lblServicio1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblServicio1Atiende.Location = new System.Drawing.Point(142, 29);
             this.lblServicio1Atiende.Name = "lblServicio1Atiende";
-            this.lblServicio1Atiende.Size = new System.Drawing.Size(793, 63);
+            this.lblServicio1Atiende.Size = new System.Drawing.Size(793, 78);
             this.lblServicio1Atiende.TabIndex = 13;
             this.lblServicio1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -696,7 +697,7 @@ namespace turnosAdministrator
             this.metroPanel2.Location = new System.Drawing.Point(305, 10);
             this.metroPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(546, 92);
+            this.metroPanel2.Size = new System.Drawing.Size(546, 117);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -715,12 +716,14 @@ namespace turnosAdministrator
             // 
             // lblVentanillaActual
             // 
-            this.lblVentanillaActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVentanillaActual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVentanillaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVentanillaActual.ForeColor = System.Drawing.Color.Black;
-            this.lblVentanillaActual.Location = new System.Drawing.Point(3, 25);
+            this.lblVentanillaActual.Location = new System.Drawing.Point(3, 35);
             this.lblVentanillaActual.Name = "lblVentanillaActual";
-            this.lblVentanillaActual.Size = new System.Drawing.Size(419, 60);
+            this.lblVentanillaActual.Size = new System.Drawing.Size(394, 77);
             this.lblVentanillaActual.TabIndex = 10;
             this.lblVentanillaActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -728,7 +731,7 @@ namespace turnosAdministrator
             // 
             this.metroLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(3, 3);
+            this.metroLabel8.Location = new System.Drawing.Point(3, 15);
             this.metroLabel8.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(77, 19);
@@ -758,7 +761,7 @@ namespace turnosAdministrator
             this.metroPanel1.Location = new System.Drawing.Point(10, 10);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(10);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(286, 92);
+            this.metroPanel1.Size = new System.Drawing.Size(286, 117);
             this.metroPanel1.TabIndex = 4;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -768,7 +771,7 @@ namespace turnosAdministrator
             // 
             this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 2);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 3);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(69, 19);
@@ -779,13 +782,14 @@ namespace turnosAdministrator
             // 
             this.btnTurnoSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTurnoSiguiente.ForeColor = System.Drawing.Color.Red;
-            this.btnTurnoSiguiente.Location = new System.Drawing.Point(128, 61);
+            this.btnTurnoSiguiente.Location = new System.Drawing.Point(128, 63);
             this.btnTurnoSiguiente.Margin = new System.Windows.Forms.Padding(5);
             this.btnTurnoSiguiente.Name = "btnTurnoSiguiente";
-            this.btnTurnoSiguiente.Size = new System.Drawing.Size(151, 23);
+            this.btnTurnoSiguiente.Size = new System.Drawing.Size(151, 46);
             this.btnTurnoSiguiente.TabIndex = 5;
             this.btnTurnoSiguiente.Text = "Tomar siguiente turno";
             this.btnTurnoSiguiente.UseSelectable = true;
+            this.btnTurnoSiguiente.Click += new System.EventHandler(this.btnTurnoSiguiente_Click);
             // 
             // cbmVentanillas
             // 
@@ -794,7 +798,7 @@ namespace turnosAdministrator
             this.cbmVentanillas.DisplayMember = "Descripcion";
             this.cbmVentanillas.FormattingEnabled = true;
             this.cbmVentanillas.ItemHeight = 23;
-            this.cbmVentanillas.Location = new System.Drawing.Point(5, 23);
+            this.cbmVentanillas.Location = new System.Drawing.Point(5, 24);
             this.cbmVentanillas.Margin = new System.Windows.Forms.Padding(5);
             this.cbmVentanillas.Name = "cbmVentanillas";
             this.cbmVentanillas.Size = new System.Drawing.Size(274, 29);
@@ -896,7 +900,7 @@ namespace turnosAdministrator
             this.pnlNotifications.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlNotifications.Controls.Add(this.label1);
             this.pnlNotifications.Controls.Add(this.pbSpnr);
-            this.pnlNotifications.Location = new System.Drawing.Point(303, 181);
+            this.pnlNotifications.Location = new System.Drawing.Point(303, 193);
             this.pnlNotifications.Name = "pnlNotifications";
             this.pnlNotifications.Size = new System.Drawing.Size(424, 74);
             this.pnlNotifications.TabIndex = 10;
@@ -920,14 +924,17 @@ namespace turnosAdministrator
             this.pbSpnr.Size = new System.Drawing.Size(68, 68);
             this.pbSpnr.TabIndex = 16;
             this.pbSpnr.TabStop = false;
+            this.pbSpnr.UseCustomBackColor = true;
+            this.pbSpnr.UseCustomForeColor = true;
             this.pbSpnr.UseSelectable = true;
+            this.pbSpnr.UseStyleColors = true;
             this.pbSpnr.Value = 50;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 400);
+            this.ClientSize = new System.Drawing.Size(1001, 445);
             this.Controls.Add(this.pnlNotifications);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabCtrl);

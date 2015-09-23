@@ -81,6 +81,10 @@ namespace turnosDashboard.Models
                             }
                             
                         }
+                        else
+                        {
+                            throw new Exception(response.Data.REST_Service.Message.ToString());
+                        }
                     }
                 });
             }
@@ -133,6 +137,10 @@ namespace turnosDashboard.Models
                                 cont++;
 	                        }
                             Program.main.refreshControls();
+                        }
+                        else
+                        {
+                            throw new Exception(response.Data.REST_Service.Message.ToString());
                         }
                     }
                 });

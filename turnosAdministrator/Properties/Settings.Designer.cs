@@ -78,5 +78,23 @@ namespace turnosAdministrator.Properties {
                 return ((int)(this["RESTCallInterval"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("turnosAdministrator")]
+        public string ApplicationName {
+            get {
+                return ((string)(this["ApplicationName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("tblLogs")]
+        public string tblLogs {
+            get {
+                return ((string)(this["tblLogs"]));
+            }
+        }
     }
 }

@@ -218,7 +218,6 @@
             this.lblVentanilla.Name = "lblVentanilla";
             this.lblVentanilla.Size = new System.Drawing.Size(694, 181);
             this.lblVentanilla.TabIndex = 7;
-            this.lblVentanilla.Text = "-";
             this.lblVentanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -534,7 +533,6 @@
             this.lblTurno.Name = "lblTurno";
             this.lblTurno.Size = new System.Drawing.Size(694, 387);
             this.lblTurno.TabIndex = 4;
-            this.lblTurno.Text = "0";
             this.lblTurno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel4

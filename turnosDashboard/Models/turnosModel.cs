@@ -60,31 +60,39 @@ namespace turnosDashboard.Models
 
                 asyncHandle = client.ExecuteAsync<RESTTurno>(request, response =>
                 {
-                    if (response.ResponseStatus == ResponseStatus.Completed)
+                    try
                     {
-                        if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
+                        if (response.ResponseStatus == ResponseStatus.Completed)
                         {
-                            try
+                            if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
                             {
-                                if (TurnoActual.Ventanilla.Equals(response.Data.response.SingleOrDefault().NombreVentanilla, StringComparison.CurrentCultureIgnoreCase) == false)
+                                try
                                 {
-                                    changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);
+                                    if (TurnoActual.Ventanilla.Equals(response.Data.response.SingleOrDefault().NombreVentanilla, StringComparison.CurrentCultureIgnoreCase) == false)
+                                    {
+                                        changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);
+                                    }
+                                    else if (TurnoActual.Turno.Equals(response.Data.response.SingleOrDefault().Turno) == false)
+                                    {
+                                        changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);
+                                    }
                                 }
-                                else if (TurnoActual.Turno.Equals(response.Data.response.SingleOrDefault().Turno) == false)
+                                catch (Exception)
                                 {
-                                    changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);
+                                    changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);                                
                                 }
-                            }
-                            catch (Exception)
-                            {
-                                changeTurno(response.Data.response.SingleOrDefault().Turno, response.Data.response.SingleOrDefault().NombreVentanilla, response.Data.response.SingleOrDefault().Tramite);                                
-                            }
                             
+                            }
+                            else
+                            {
+                                throw new Exception(response.Data.REST_Service.Message.ToString());
+                            }
                         }
-                        else
-                        {
-                            throw new Exception(response.Data.REST_Service.Message.ToString());
-                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger logger = LogManager.GetCurrentClassLogger();
+                        logger.Error(ex, ex.Message);
                     }
                 });
             }
@@ -120,28 +128,38 @@ namespace turnosDashboard.Models
 
                 asyncHandle3Turnos = client.ExecuteAsync<RESTTurno>(request, response =>
                 {
-                    if (response.ResponseStatus == ResponseStatus.Completed)
+                    try
                     {
-                        if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
+
+                    
+                        if (response.ResponseStatus == ResponseStatus.Completed)
                         {
-                            short cont = 0;
-                            foreach (strctTurno item in response.Data.response)
-	                        {
-                                if (cont > 0) {                
-                                    turno _item = new turno();
-                                    _item.Turno = item.Turno;
-                                    _item.Ventanilla = item.NombreVentanilla;
-                                    _item.Tramite = item.Tramite;
-                                    TurnosAtendiendo.Add(_item);
-                                }
-                                cont++;
-	                        }
-                            Program.main.refreshControls();
+                            if (response.Data.REST_Service.Status_response.ToString().Trim().Equals("ok", StringComparison.CurrentCultureIgnoreCase) == true)
+                            {
+                                short cont = 0;
+                                foreach (strctTurno item in response.Data.response)
+	                            {
+                                    if (cont > 0) {                
+                                        turno _item = new turno();
+                                        _item.Turno = item.Turno;
+                                        _item.Ventanilla = item.NombreVentanilla;
+                                        _item.Tramite = item.Tramite;
+                                        TurnosAtendiendo.Add(_item);
+                                    }
+                                    cont++;
+	                            }
+                                Program.main.refreshControls();
+                            }
+                            else
+                            {
+                                throw new Exception(response.Data.REST_Service.Message.ToString());
+                            }
                         }
-                        else
-                        {
-                            throw new Exception(response.Data.REST_Service.Message.ToString());
-                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger logger = LogManager.GetCurrentClassLogger();
+                        logger.Error(ex, ex.Message);
                     }
                 });
             }

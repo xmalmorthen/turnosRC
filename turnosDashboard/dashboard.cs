@@ -24,26 +24,46 @@ namespace turnosDashboard
         }
 
 
-        void getWeatherData()
+        void getWeatherDefaultData()
         {
             strctWeather data = weather.get(turnosDashboard.Properties.Settings.Default.WeatherDefault);
             if (data != null)
             {
                 lblDefaultWeather.Invoke((MethodInvoker)(() => lblDefaultWeather.Text = string.Format("{0} {1} °C", data.Name, data.Temp)));
                 pbIconDefaultWeather.Invoke((MethodInvoker)(() => pbIconDefaultWeather.Load(data.UrlIcon)));
-
-                System.Threading.Thread.Sleep(turnosDashboard.Properties.Settings.Default.WeatherRefresh * 1000);
+                System.Threading.Thread.Sleep(decimal.ToInt32(turnosDashboard.Properties.Settings.Default.WeatherDefaultRefresh * 60 * 1000));
             }
-           getWeatherData();
+            getWeatherDefaultData();
         }
+
+
+        void getWeatherDinamicData()
+        {
+            foreach (caWeathers item in weather.getCaWeathers())
+            {
+                strctWeather data = weather.get(string.Format("{0},mx",item.weather.ToString().Trim()));
+
+                if (data != null)
+                {
+                    lblOtherWeather.Invoke((MethodInvoker)(() => lblOtherWeather.Text = string.Format("{0} {1} °C", data.Name, data.Temp)));
+                    pbIconOtherWeather.Invoke((MethodInvoker)(() => pbIconOtherWeather.Load(data.UrlIcon)));
+                    System.Threading.Thread.Sleep(decimal.ToInt32(turnosDashboard.Properties.Settings.Default.WeatherDinamicRefresh * 60 * 1000));
+                }
+            }
+            getWeatherDinamicData();
+        }
+
 
         void initializeControls() {
             //Inicializar el label de la fecha
             lblFecha.Text = String.Format("{0:dddd, d} de {0:MMMM} de {0:yyyy}", DateTime.Now);
 
 
-            System.Threading.Thread weatherThread = new System.Threading.Thread(getWeatherData);            
-            weatherThread.Start(); 
+            System.Threading.Thread weatherDefaultThread = new System.Threading.Thread(getWeatherDefaultData);            
+            weatherDefaultThread.Start();
+
+            System.Threading.Thread weatherDinamicThread = new System.Threading.Thread(getWeatherDinamicData);
+            weatherDinamicThread.Start(); 
 
 
             //Configurar timer que muestra la hora

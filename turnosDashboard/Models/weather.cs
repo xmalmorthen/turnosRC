@@ -74,5 +74,10 @@ namespace turnosDashboard.Models
             return model;
         }
 
+        public static List<caWeathers> getCaWeathers() {
+            DBDataContext db = new DBDataContext();
+            return db.caWeathers.ToList();
+        }
+        
     }
 }

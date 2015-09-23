@@ -98,9 +98,32 @@ namespace turnosDashboard.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("60")]
-        public int WeatherRefresh {
+        public decimal WeatherDefaultRefresh {
             get {
-                return ((int)(this["WeatherRefresh"]));
+                return ((decimal)(this["WeatherDefaultRefresh"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.10.20.134\\MSSQLSERVER2014;Initial Catalog=bdTurnos;Persist Securit" +
+            "y Info=True;User ID=sa;Password=as")]
+        public string bdTurnosConnectionString {
+            get {
+                return ((string)(this["bdTurnosConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.5")]
+        public decimal WeatherDinamicRefresh {
+            get {
+                return ((decimal)(this["WeatherDinamicRefresh"]));
+            }
+            set {
+                this["WeatherDinamicRefresh"] = value;
             }
         }
     }

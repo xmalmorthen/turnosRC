@@ -37,7 +37,7 @@ namespace turnosAdministrator.Models
                     }
                     else
                     {
-                        throw new Exception(ventanillas.Data.REST_Service.Message.ToString());
+                        //throw new Exception(ventanillas.Data.REST_Service.Message.ToString());
                     }
                 }
                 
@@ -73,7 +73,7 @@ namespace turnosAdministrator.Models
                     }
                     else
                     {
-                        throw new Exception(turnos.Data.REST_Service.Message.ToString());
+                        //throw new Exception(turnos.Data.REST_Service.Message.ToString());
                     }
                 }
 
@@ -111,7 +111,7 @@ namespace turnosAdministrator.Models
                         response = turnos.Data.response.SingleOrDefault();
                     }
                     else {
-                        throw new Exception(turnos.Data.REST_Service.Message.ToString());
+                        //throw new Exception(turnos.Data.REST_Service.Message.ToString());
                     }
                 }
 

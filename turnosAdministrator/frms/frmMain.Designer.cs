@@ -30,10 +30,18 @@ namespace turnosAdministrator
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
@@ -62,6 +70,16 @@ namespace turnosAdministrator
             this.pbDeleteWeatherForm = new System.Windows.Forms.PictureBox();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.pbActualizarTurnos = new System.Windows.Forms.PictureBox();
+            this.pbDeletePlayList = new System.Windows.Forms.PictureBox();
+            this.pbRefreshPlayList = new System.Windows.Forms.PictureBox();
+            this.pbCancelPlayList = new System.Windows.Forms.PictureBox();
+            this.pbSavePlayList = new System.Windows.Forms.PictureBox();
+            this.pbNewPlayList = new System.Windows.Forms.PictureBox();
+            this.pbDeleteVideo = new System.Windows.Forms.PictureBox();
+            this.pbPlayVideo = new System.Windows.Forms.PictureBox();
+            this.pbNewVideo = new System.Windows.Forms.PictureBox();
+            this.pbEditPlayList = new System.Windows.Forms.PictureBox();
+            this.pbDefault = new System.Windows.Forms.PictureBox();
             this.tabCtrl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -85,7 +103,34 @@ namespace turnosAdministrator
             this.cbmVentanillas = new MetroFramework.Controls.MetroComboBox();
             this.strctVentanillaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlNewPlayList = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.gdVideos = new MetroFramework.Controls.MetroGrid();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPlayListDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.videoPathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fInsDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fActDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caPlayListDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dePlayListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtPlayListname = new MetroFramework.Controls.MetroTextBox();
+            this.caPlayListBingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.pnlPlayList = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.gdPlayList = new MetroFramework.Controls.MetroGrid();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playListNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalVideosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fInsDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fActDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage3 = new System.Windows.Forms.TabPage();
             this.metroContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,6 +140,12 @@ namespace turnosAdministrator
             this.pnlNotifications = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pbSpnr = new MetroFramework.Controls.MetroProgressSpinner();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weatherDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fInsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.factDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -112,6 +163,16 @@ namespace turnosAdministrator
             ((System.ComponentModel.ISupportInitialize)(this.pbRefreshWeatherForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeleteWeatherForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizarTurnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeletePlayList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefreshPlayList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCancelPlayList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSavePlayList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNewPlayList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteVideo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayVideo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNewVideo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditPlayList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDefault)).BeginInit();
             this.tabCtrl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -119,6 +180,23 @@ namespace turnosAdministrator
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.strctVentanillaBindingSource)).BeginInit();
             this.metroTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.pnlNewPlayList.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdVideos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dePlayListBindingSource)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.caPlayListBingSource)).BeginInit();
+            this.pnlPlayList.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdPlayList)).BeginInit();
             this.metroTabPage3.SuspendLayout();
             this.metroContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -132,12 +210,10 @@ namespace turnosAdministrator
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroStyleExtender1.SetApplyMetroTheme(this.splitContainer1, true);
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 10);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -150,8 +226,8 @@ namespace turnosAdministrator
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel3);
             this.splitContainer1.Panel2MinSize = 265;
-            this.splitContainer1.Size = new System.Drawing.Size(947, 262);
-            this.splitContainer1.SplitterDistance = 376;
+            this.splitContainer1.Size = new System.Drawing.Size(909, 454);
+            this.splitContainer1.SplitterDistance = 411;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -167,7 +243,7 @@ namespace turnosAdministrator
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(374, 260);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(409, 452);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // pnlWeatherForm
@@ -180,7 +256,7 @@ namespace turnosAdministrator
             this.pnlWeatherForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlWeatherForm.Location = new System.Drawing.Point(3, 3);
             this.pnlWeatherForm.Name = "pnlWeatherForm";
-            this.pnlWeatherForm.Size = new System.Drawing.Size(368, 219);
+            this.pnlWeatherForm.Size = new System.Drawing.Size(403, 411);
             this.pnlWeatherForm.TabIndex = 0;
             // 
             // pbNew
@@ -189,7 +265,7 @@ namespace turnosAdministrator
             this.metroStyleExtender1.SetApplyMetroTheme(this.pbNew, true);
             this.pbNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbNew.Image = ((System.Drawing.Image)(resources.GetObject("pbNew.Image")));
-            this.pbNew.Location = new System.Drawing.Point(338, 14);
+            this.pbNew.Location = new System.Drawing.Point(373, 14);
             this.pbNew.Name = "pbNew";
             this.pbNew.Size = new System.Drawing.Size(24, 24);
             this.pbNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,9 +284,9 @@ namespace turnosAdministrator
             // 
             // 
             this.txtWeatherDescrip.CustomButton.Image = null;
-            this.txtWeatherDescrip.CustomButton.Location = new System.Drawing.Point(264, 2);
+            this.txtWeatherDescrip.CustomButton.Location = new System.Drawing.Point(107, 2);
             this.txtWeatherDescrip.CustomButton.Name = "";
-            this.txtWeatherDescrip.CustomButton.Size = new System.Drawing.Size(93, 93);
+            this.txtWeatherDescrip.CustomButton.Size = new System.Drawing.Size(285, 285);
             this.txtWeatherDescrip.CustomButton.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtWeatherDescrip.CustomButton.TabIndex = 1;
             this.txtWeatherDescrip.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -229,7 +305,7 @@ namespace turnosAdministrator
             this.txtWeatherDescrip.SelectionLength = 0;
             this.txtWeatherDescrip.SelectionStart = 0;
             this.txtWeatherDescrip.ShowClearButton = true;
-            this.txtWeatherDescrip.Size = new System.Drawing.Size(360, 98);
+            this.txtWeatherDescrip.Size = new System.Drawing.Size(395, 290);
             this.txtWeatherDescrip.TabIndex = 3;
             this.txtWeatherDescrip.UseSelectable = true;
             this.txtWeatherDescrip.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -258,7 +334,7 @@ namespace turnosAdministrator
             // 
             // 
             this.txtWeather.CustomButton.Image = null;
-            this.txtWeather.CustomButton.Location = new System.Drawing.Point(332, 2);
+            this.txtWeather.CustomButton.Location = new System.Drawing.Point(367, 2);
             this.txtWeather.CustomButton.Name = "";
             this.txtWeather.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtWeather.CustomButton.Style = MetroFramework.MetroColorStyle.Silver;
@@ -271,7 +347,7 @@ namespace turnosAdministrator
             this.txtWeather.Lines = new string[0];
             this.txtWeather.Location = new System.Drawing.Point(5, 46);
             this.txtWeather.Margin = new System.Windows.Forms.Padding(5, 0, 5, 3);
-            this.txtWeather.MaxLength = 32767;
+            this.txtWeather.MaxLength = 50;
             this.txtWeather.Name = "txtWeather";
             this.txtWeather.PasswordChar = '\0';
             this.txtWeather.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -279,7 +355,7 @@ namespace turnosAdministrator
             this.txtWeather.SelectionLength = 0;
             this.txtWeather.SelectionStart = 0;
             this.txtWeather.ShowClearButton = true;
-            this.txtWeather.Size = new System.Drawing.Size(360, 30);
+            this.txtWeather.Size = new System.Drawing.Size(395, 30);
             this.txtWeather.TabIndex = 1;
             this.txtWeather.UseSelectable = true;
             this.txtWeather.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -301,15 +377,16 @@ namespace turnosAdministrator
             this.pnlBtns.Controls.Add(this.btnCancelWeatherForm);
             this.pnlBtns.Controls.Add(this.btnAcceptWeatherForm);
             this.pnlBtns.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBtns.Location = new System.Drawing.Point(3, 228);
+            this.pnlBtns.Location = new System.Drawing.Point(3, 420);
             this.pnlBtns.Name = "pnlBtns";
-            this.pnlBtns.Size = new System.Drawing.Size(368, 29);
+            this.pnlBtns.Size = new System.Drawing.Size(403, 29);
             this.pnlBtns.TabIndex = 1;
             // 
             // btnCancelWeatherForm
             // 
             this.btnCancelWeatherForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelWeatherForm.Location = new System.Drawing.Point(290, 3);
+            this.btnCancelWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelWeatherForm.Location = new System.Drawing.Point(325, 3);
             this.btnCancelWeatherForm.Name = "btnCancelWeatherForm";
             this.btnCancelWeatherForm.Size = new System.Drawing.Size(75, 23);
             this.btnCancelWeatherForm.TabIndex = 2;
@@ -321,7 +398,8 @@ namespace turnosAdministrator
             // btnAcceptWeatherForm
             // 
             this.btnAcceptWeatherForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAcceptWeatherForm.Location = new System.Drawing.Point(209, 3);
+            this.btnAcceptWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcceptWeatherForm.Location = new System.Drawing.Point(244, 3);
             this.btnAcceptWeatherForm.Name = "btnAcceptWeatherForm";
             this.btnAcceptWeatherForm.Size = new System.Drawing.Size(75, 23);
             this.btnAcceptWeatherForm.TabIndex = 1;
@@ -343,7 +421,7 @@ namespace turnosAdministrator
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(563, 260);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(490, 452);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // gdWeathers
@@ -352,21 +430,21 @@ namespace turnosAdministrator
             this.gdWeathers.AllowUserToDeleteRows = false;
             this.gdWeathers.AllowUserToOrderColumns = true;
             this.gdWeathers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.gdWeathers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.gdWeathers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.gdWeathers.AutoGenerateColumns = false;
             this.gdWeathers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gdWeathers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdWeathers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gdWeathers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gdWeathers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdWeathers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -375,14 +453,14 @@ namespace turnosAdministrator
             this.fInsDataGridViewTextBoxColumn,
             this.factDataGridViewTextBoxColumn});
             this.gdWeathers.DataSource = this.caWeathersBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.DefaultCellStyle = dataGridViewCellStyle11;
             this.gdWeathers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdWeathers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gdWeathers.EnableHeadersVisualStyles = false;
@@ -393,20 +471,20 @@ namespace turnosAdministrator
             this.gdWeathers.Name = "gdWeathers";
             this.gdWeathers.ReadOnly = true;
             this.gdWeathers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdWeathers.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gdWeathers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gdWeathers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gdWeathers.ShowCellErrors = false;
             this.gdWeathers.ShowEditingIcon = false;
             this.gdWeathers.ShowRowErrors = false;
-            this.gdWeathers.Size = new System.Drawing.Size(527, 254);
+            this.gdWeathers.Size = new System.Drawing.Size(454, 446);
             this.gdWeathers.StandardTab = true;
             this.gdWeathers.TabIndex = 2;
             this.gdWeathers.UseStyleColors = true;
@@ -457,10 +535,10 @@ namespace turnosAdministrator
             this.panel2.Controls.Add(this.pbRefreshWeatherForm);
             this.panel2.Controls.Add(this.pbDeleteWeatherForm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(533, 0);
+            this.panel2.Location = new System.Drawing.Point(460, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(30, 260);
+            this.panel2.Size = new System.Drawing.Size(30, 452);
             this.panel2.TabIndex = 3;
             // 
             // pbEditWeatherForm
@@ -491,9 +569,10 @@ namespace turnosAdministrator
             // 
             // pbDeleteWeatherForm
             // 
+            this.pbDeleteWeatherForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeleteWeatherForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbDeleteWeatherForm.Image = global::turnosAdministrator.Properties.Resources.delete;
-            this.pbDeleteWeatherForm.Location = new System.Drawing.Point(3, 233);
+            this.pbDeleteWeatherForm.Location = new System.Drawing.Point(3, 425);
             this.pbDeleteWeatherForm.Name = "pbDeleteWeatherForm";
             this.pbDeleteWeatherForm.Size = new System.Drawing.Size(24, 24);
             this.pbDeleteWeatherForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -514,7 +593,7 @@ namespace turnosAdministrator
             this.pbActualizarTurnos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbActualizarTurnos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizarTurnos.Image = global::turnosAdministrator.Properties.Resources.refresh2;
-            this.pbActualizarTurnos.Location = new System.Drawing.Point(857, 9);
+            this.pbActualizarTurnos.Location = new System.Drawing.Point(806, 9);
             this.pbActualizarTurnos.Name = "pbActualizarTurnos";
             this.pbActualizarTurnos.Size = new System.Drawing.Size(93, 118);
             this.pbActualizarTurnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -522,6 +601,146 @@ namespace turnosAdministrator
             this.pbActualizarTurnos.TabStop = false;
             this.metroToolTip1.SetToolTip(this.pbActualizarTurnos, "Actualizar turnos");
             this.pbActualizarTurnos.Click += new System.EventHandler(this.pbActualizarTurnos_Click);
+            // 
+            // pbDeletePlayList
+            // 
+            this.pbDeletePlayList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbDeletePlayList.Image = global::turnosAdministrator.Properties.Resources.delete;
+            this.pbDeletePlayList.InitialImage = null;
+            this.pbDeletePlayList.Location = new System.Drawing.Point(3, 63);
+            this.pbDeletePlayList.Name = "pbDeletePlayList";
+            this.pbDeletePlayList.Size = new System.Drawing.Size(24, 24);
+            this.pbDeletePlayList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbDeletePlayList.TabIndex = 1;
+            this.pbDeletePlayList.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbDeletePlayList, "Eliminar lista de reproducción");
+            this.pbDeletePlayList.Click += new System.EventHandler(this.pbDeletePlayList_Click);
+            // 
+            // pbRefreshPlayList
+            // 
+            this.pbRefreshPlayList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRefreshPlayList.Image = global::turnosAdministrator.Properties.Resources.refresh;
+            this.pbRefreshPlayList.Location = new System.Drawing.Point(3, 3);
+            this.pbRefreshPlayList.Name = "pbRefreshPlayList";
+            this.pbRefreshPlayList.Size = new System.Drawing.Size(24, 24);
+            this.pbRefreshPlayList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbRefreshPlayList.TabIndex = 0;
+            this.pbRefreshPlayList.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbRefreshPlayList, "Actualizar listas de reproducción");
+            this.pbRefreshPlayList.Click += new System.EventHandler(this.pbRefreshPlayList_Click);
+            // 
+            // pbCancelPlayList
+            // 
+            this.pbCancelPlayList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCancelPlayList.Image = global::turnosAdministrator.Properties.Resources.cancel;
+            this.pbCancelPlayList.Location = new System.Drawing.Point(132, 3);
+            this.pbCancelPlayList.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.pbCancelPlayList.Name = "pbCancelPlayList";
+            this.pbCancelPlayList.Size = new System.Drawing.Size(48, 48);
+            this.pbCancelPlayList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbCancelPlayList.TabIndex = 2;
+            this.pbCancelPlayList.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbCancelPlayList, "Cancelar lista de reproducción");
+            this.pbCancelPlayList.Click += new System.EventHandler(this.pbCancelPlayList_Click);
+            // 
+            // pbSavePlayList
+            // 
+            this.pbSavePlayList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSavePlayList.Image = global::turnosAdministrator.Properties.Resources.save;
+            this.pbSavePlayList.Location = new System.Drawing.Point(64, 3);
+            this.pbSavePlayList.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.pbSavePlayList.Name = "pbSavePlayList";
+            this.pbSavePlayList.Size = new System.Drawing.Size(48, 48);
+            this.pbSavePlayList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSavePlayList.TabIndex = 1;
+            this.pbSavePlayList.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbSavePlayList, "Guardar lista de reproducción");
+            this.pbSavePlayList.Click += new System.EventHandler(this.pbSavePlayList_Click);
+            // 
+            // pbNewPlayList
+            // 
+            this.pbNewPlayList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNewPlayList.Image = ((System.Drawing.Image)(resources.GetObject("pbNewPlayList.Image")));
+            this.pbNewPlayList.Location = new System.Drawing.Point(3, 3);
+            this.pbNewPlayList.Name = "pbNewPlayList";
+            this.pbNewPlayList.Size = new System.Drawing.Size(48, 48);
+            this.pbNewPlayList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbNewPlayList.TabIndex = 0;
+            this.pbNewPlayList.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbNewPlayList, "Crear lista de reproducción nueva");
+            this.pbNewPlayList.Click += new System.EventHandler(this.pbNewPlayList_Click);
+            // 
+            // pbDeleteVideo
+            // 
+            this.pbDeleteVideo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbDeleteVideo.Image = global::turnosAdministrator.Properties.Resources.delete;
+            this.pbDeleteVideo.InitialImage = null;
+            this.pbDeleteVideo.Location = new System.Drawing.Point(3, 63);
+            this.pbDeleteVideo.Name = "pbDeleteVideo";
+            this.pbDeleteVideo.Size = new System.Drawing.Size(24, 24);
+            this.pbDeleteVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbDeleteVideo.TabIndex = 1;
+            this.pbDeleteVideo.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbDeleteVideo, "Quitar video de la lista");
+            this.pbDeleteVideo.Visible = false;
+            this.pbDeleteVideo.Click += new System.EventHandler(this.pbDeleteVideo_Click);
+            // 
+            // pbPlayVideo
+            // 
+            this.pbPlayVideo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbPlayVideo.Image = global::turnosAdministrator.Properties.Resources.play;
+            this.pbPlayVideo.Location = new System.Drawing.Point(3, 33);
+            this.pbPlayVideo.Name = "pbPlayVideo";
+            this.pbPlayVideo.Size = new System.Drawing.Size(24, 24);
+            this.pbPlayVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbPlayVideo.TabIndex = 0;
+            this.pbPlayVideo.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbPlayVideo, "Reproducir video");
+            this.pbPlayVideo.Visible = false;
+            this.pbPlayVideo.Click += new System.EventHandler(this.pbPlayVideo_Click);
+            // 
+            // pbNewVideo
+            // 
+            this.pbNewVideo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNewVideo.Image = global::turnosAdministrator.Properties.Resources.add2;
+            this.pbNewVideo.InitialImage = null;
+            this.pbNewVideo.Location = new System.Drawing.Point(3, 3);
+            this.pbNewVideo.Name = "pbNewVideo";
+            this.pbNewVideo.Size = new System.Drawing.Size(24, 24);
+            this.pbNewVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbNewVideo.TabIndex = 2;
+            this.pbNewVideo.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbNewVideo, "Agregar video");
+            this.pbNewVideo.Visible = false;
+            this.pbNewVideo.Click += new System.EventHandler(this.pbNewVideo_Click);
+            // 
+            // pbEditPlayList
+            // 
+            this.pbEditPlayList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEditPlayList.Image = global::turnosAdministrator.Properties.Resources.edit;
+            this.pbEditPlayList.InitialImage = null;
+            this.pbEditPlayList.Location = new System.Drawing.Point(3, 33);
+            this.pbEditPlayList.Name = "pbEditPlayList";
+            this.pbEditPlayList.Size = new System.Drawing.Size(24, 24);
+            this.pbEditPlayList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEditPlayList.TabIndex = 2;
+            this.pbEditPlayList.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbEditPlayList, "Editar lista de reproducción");
+            this.pbEditPlayList.Click += new System.EventHandler(this.pbEditPlayList_Click);
+            // 
+            // pbDefault
+            // 
+            this.pbDefault.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbDefault.Image = ((System.Drawing.Image)(resources.GetObject("pbDefault.Image")));
+            this.pbDefault.Location = new System.Drawing.Point(200, 3);
+            this.pbDefault.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.pbDefault.Name = "pbDefault";
+            this.pbDefault.Size = new System.Drawing.Size(48, 48);
+            this.pbDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbDefault.TabIndex = 3;
+            this.pbDefault.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pbDefault, "Establecer como lista para reproducir en el tablero de turnos");
+            this.pbDefault.Click += new System.EventHandler(this.pbDefault_Click);
             // 
             // tabCtrl
             // 
@@ -531,8 +750,8 @@ namespace turnosAdministrator
             this.tabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCtrl.Location = new System.Drawing.Point(20, 60);
             this.tabCtrl.Name = "tabCtrl";
-            this.tabCtrl.SelectedIndex = 2;
-            this.tabCtrl.Size = new System.Drawing.Size(961, 365);
+            this.tabCtrl.SelectedIndex = 1;
+            this.tabCtrl.Size = new System.Drawing.Size(917, 496);
             this.tabCtrl.Style = MetroFramework.MetroColorStyle.Silver;
             this.tabCtrl.TabIndex = 0;
             this.tabCtrl.UseSelectable = true;
@@ -550,7 +769,7 @@ namespace turnosAdministrator
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(953, 323);
+            this.metroTabPage1.Size = new System.Drawing.Size(909, 454);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Toma de Turnos";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -582,16 +801,16 @@ namespace turnosAdministrator
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(940, 189);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(889, 300);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTurno2Atiende
             // 
             this.lblTurno2Atiende.AutoSize = true;
             this.lblTurno2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTurno2Atiende.Location = new System.Drawing.Point(5, 109);
+            this.lblTurno2Atiende.Location = new System.Drawing.Point(5, 164);
             this.lblTurno2Atiende.Name = "lblTurno2Atiende";
-            this.lblTurno2Atiende.Size = new System.Drawing.Size(47, 78);
+            this.lblTurno2Atiende.Size = new System.Drawing.Size(47, 134);
             this.lblTurno2Atiende.TabIndex = 14;
             this.lblTurno2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -599,9 +818,9 @@ namespace turnosAdministrator
             // 
             this.lblVentanilla2Atiende.AutoSize = true;
             this.lblVentanilla2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVentanilla2Atiende.Location = new System.Drawing.Point(60, 109);
+            this.lblVentanilla2Atiende.Location = new System.Drawing.Point(60, 164);
             this.lblVentanilla2Atiende.Name = "lblVentanilla2Atiende";
-            this.lblVentanilla2Atiende.Size = new System.Drawing.Size(74, 78);
+            this.lblVentanilla2Atiende.Size = new System.Drawing.Size(74, 134);
             this.lblVentanilla2Atiende.TabIndex = 15;
             this.lblVentanilla2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -609,9 +828,9 @@ namespace turnosAdministrator
             // 
             this.lblServicio2Atiende.AutoSize = true;
             this.lblServicio2Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblServicio2Atiende.Location = new System.Drawing.Point(142, 109);
+            this.lblServicio2Atiende.Location = new System.Drawing.Point(142, 164);
             this.lblServicio2Atiende.Name = "lblServicio2Atiende";
-            this.lblServicio2Atiende.Size = new System.Drawing.Size(793, 78);
+            this.lblServicio2Atiende.Size = new System.Drawing.Size(742, 134);
             this.lblServicio2Atiende.TabIndex = 16;
             this.lblServicio2Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -647,7 +866,7 @@ namespace turnosAdministrator
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel5.Location = new System.Drawing.Point(142, 2);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(793, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(742, 25);
             this.metroLabel5.TabIndex = 10;
             this.metroLabel5.Text = "Servicio";
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -658,7 +877,7 @@ namespace turnosAdministrator
             this.lblTurno1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTurno1Atiende.Location = new System.Drawing.Point(5, 29);
             this.lblTurno1Atiende.Name = "lblTurno1Atiende";
-            this.lblTurno1Atiende.Size = new System.Drawing.Size(47, 78);
+            this.lblTurno1Atiende.Size = new System.Drawing.Size(47, 133);
             this.lblTurno1Atiende.TabIndex = 11;
             this.lblTurno1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -668,7 +887,7 @@ namespace turnosAdministrator
             this.lblVentanilla1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVentanilla1Atiende.Location = new System.Drawing.Point(60, 29);
             this.lblVentanilla1Atiende.Name = "lblVentanilla1Atiende";
-            this.lblVentanilla1Atiende.Size = new System.Drawing.Size(74, 78);
+            this.lblVentanilla1Atiende.Size = new System.Drawing.Size(74, 133);
             this.lblVentanilla1Atiende.TabIndex = 12;
             this.lblVentanilla1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -678,7 +897,7 @@ namespace turnosAdministrator
             this.lblServicio1Atiende.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblServicio1Atiende.Location = new System.Drawing.Point(142, 29);
             this.lblServicio1Atiende.Name = "lblServicio1Atiende";
-            this.lblServicio1Atiende.Size = new System.Drawing.Size(793, 78);
+            this.lblServicio1Atiende.Size = new System.Drawing.Size(742, 133);
             this.lblServicio1Atiende.TabIndex = 13;
             this.lblServicio1Atiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -697,7 +916,7 @@ namespace turnosAdministrator
             this.metroPanel2.Location = new System.Drawing.Point(305, 10);
             this.metroPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(546, 117);
+            this.metroPanel2.Size = new System.Drawing.Size(495, 117);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -707,7 +926,7 @@ namespace turnosAdministrator
             // 
             this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(402, 3);
+            this.metroLabel2.Location = new System.Drawing.Point(351, 3);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(41, 19);
@@ -723,7 +942,7 @@ namespace turnosAdministrator
             this.lblVentanillaActual.ForeColor = System.Drawing.Color.Black;
             this.lblVentanillaActual.Location = new System.Drawing.Point(3, 35);
             this.lblVentanillaActual.Name = "lblVentanillaActual";
-            this.lblVentanillaActual.Size = new System.Drawing.Size(394, 77);
+            this.lblVentanillaActual.Size = new System.Drawing.Size(343, 77);
             this.lblVentanillaActual.TabIndex = 10;
             this.lblVentanillaActual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -743,7 +962,7 @@ namespace turnosAdministrator
             this.lblTurnoActual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTurnoActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnoActual.ForeColor = System.Drawing.Color.Red;
-            this.lblTurnoActual.Location = new System.Drawing.Point(428, 14);
+            this.lblTurnoActual.Location = new System.Drawing.Point(377, 14);
             this.lblTurnoActual.Name = "lblTurnoActual";
             this.lblTurnoActual.Size = new System.Drawing.Size(112, 70);
             this.lblTurnoActual.TabIndex = 8;
@@ -781,6 +1000,7 @@ namespace turnosAdministrator
             // btnTurnoSiguiente
             // 
             this.btnTurnoSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTurnoSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTurnoSiguiente.ForeColor = System.Drawing.Color.Red;
             this.btnTurnoSiguiente.Location = new System.Drawing.Point(128, 63);
             this.btnTurnoSiguiente.Margin = new System.Windows.Forms.Padding(5);
@@ -813,32 +1033,472 @@ namespace turnosAdministrator
             // metroTabPage2
             // 
             this.metroTabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.metroTabPage2.Controls.Add(this.tableLayoutPanel2);
+            this.metroTabPage2.Controls.Add(this.splitContainer2);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(953, 323);
+            this.metroTabPage2.Size = new System.Drawing.Size(909, 454);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Administración de videos";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // tableLayoutPanel2
+            // splitContainer2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(953, 323);
-            this.tableLayoutPanel2.TabIndex = 2;
+            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.tableLayoutPanel6);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.pnlPlayList);
+            this.splitContainer2.Size = new System.Drawing.Size(906, 448);
+            this.splitContainer2.SplitterDistance = 571;
+            this.splitContainer2.TabIndex = 2;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.AutoSize = true;
+            this.tableLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.Controls.Add(this.flowLayoutPanel2, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.pnlNewPlayList, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(569, 446);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel2.Controls.Add(this.pbNewPlayList);
+            this.flowLayoutPanel2.Controls.Add(this.pbSavePlayList);
+            this.flowLayoutPanel2.Controls.Add(this.pbCancelPlayList);
+            this.flowLayoutPanel2.Controls.Add(this.pbDefault);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(563, 54);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // pnlNewPlayList
+            // 
+            this.pnlNewPlayList.AutoSize = true;
+            this.pnlNewPlayList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlNewPlayList.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
+            this.pnlNewPlayList.ColumnCount = 1;
+            this.pnlNewPlayList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlNewPlayList.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.pnlNewPlayList.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.pnlNewPlayList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlNewPlayList.Location = new System.Drawing.Point(3, 60);
+            this.pnlNewPlayList.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.pnlNewPlayList.Name = "pnlNewPlayList";
+            this.pnlNewPlayList.RowCount = 2;
+            this.pnlNewPlayList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.pnlNewPlayList.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.pnlNewPlayList.Size = new System.Drawing.Size(563, 383);
+            this.pnlNewPlayList.TabIndex = 2;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.AutoSize = true;
+            this.tableLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel9.Controls.Add(this.flowLayoutPanel3, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.gdVideos, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(5, 45);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(553, 335);
+            this.tableLayoutPanel9.TabIndex = 11;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.pbNewVideo);
+            this.flowLayoutPanel3.Controls.Add(this.pbPlayVideo);
+            this.flowLayoutPanel3.Controls.Add(this.pbDeleteVideo);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(523, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(30, 335);
+            this.flowLayoutPanel3.TabIndex = 6;
+            // 
+            // gdVideos
+            // 
+            this.gdVideos.AllowUserToAddRows = false;
+            this.gdVideos.AllowUserToDeleteRows = false;
+            this.gdVideos.AllowUserToOrderColumns = true;
+            this.gdVideos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.gdVideos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gdVideos.AutoGenerateColumns = false;
+            this.gdVideos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gdVideos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gdVideos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gdVideos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdVideos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gdVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdVideos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn3,
+            this.idPlayListDataGridViewTextBoxColumn,
+            this.videoPathDataGridViewTextBoxColumn,
+            this.fInsDataGridViewTextBoxColumn3,
+            this.fActDataGridViewTextBoxColumn3,
+            this.caPlayListDataGridViewTextBoxColumn});
+            this.gdVideos.DataSource = this.dePlayListBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdVideos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gdVideos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdVideos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gdVideos.EnableHeadersVisualStyles = false;
+            this.gdVideos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gdVideos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gdVideos.Location = new System.Drawing.Point(3, 3);
+            this.gdVideos.Name = "gdVideos";
+            this.gdVideos.ReadOnly = true;
+            this.gdVideos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdVideos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gdVideos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gdVideos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gdVideos.ShowCellErrors = false;
+            this.gdVideos.ShowEditingIcon = false;
+            this.gdVideos.ShowRowErrors = false;
+            this.gdVideos.Size = new System.Drawing.Size(517, 329);
+            this.gdVideos.StandardTab = true;
+            this.gdVideos.Style = MetroFramework.MetroColorStyle.Orange;
+            this.gdVideos.TabIndex = 5;
+            this.gdVideos.UseStyleColors = true;
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // idPlayListDataGridViewTextBoxColumn
+            // 
+            this.idPlayListDataGridViewTextBoxColumn.DataPropertyName = "idPlayList";
+            this.idPlayListDataGridViewTextBoxColumn.HeaderText = "idPlayList";
+            this.idPlayListDataGridViewTextBoxColumn.Name = "idPlayListDataGridViewTextBoxColumn";
+            this.idPlayListDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPlayListDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // videoPathDataGridViewTextBoxColumn
+            // 
+            this.videoPathDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.videoPathDataGridViewTextBoxColumn.DataPropertyName = "videoPath";
+            this.videoPathDataGridViewTextBoxColumn.HeaderText = "Ubicación del Video";
+            this.videoPathDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.videoPathDataGridViewTextBoxColumn.Name = "videoPathDataGridViewTextBoxColumn";
+            this.videoPathDataGridViewTextBoxColumn.ReadOnly = true;
+            this.videoPathDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // fInsDataGridViewTextBoxColumn3
+            // 
+            this.fInsDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fInsDataGridViewTextBoxColumn3.DataPropertyName = "fIns";
+            this.fInsDataGridViewTextBoxColumn3.HeaderText = "Fecha de Registro";
+            this.fInsDataGridViewTextBoxColumn3.MinimumWidth = 200;
+            this.fInsDataGridViewTextBoxColumn3.Name = "fInsDataGridViewTextBoxColumn3";
+            this.fInsDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.fInsDataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // fActDataGridViewTextBoxColumn3
+            // 
+            this.fActDataGridViewTextBoxColumn3.DataPropertyName = "fAct";
+            this.fActDataGridViewTextBoxColumn3.HeaderText = "fAct";
+            this.fActDataGridViewTextBoxColumn3.Name = "fActDataGridViewTextBoxColumn3";
+            this.fActDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.fActDataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // caPlayListDataGridViewTextBoxColumn
+            // 
+            this.caPlayListDataGridViewTextBoxColumn.DataPropertyName = "caPlayList";
+            this.caPlayListDataGridViewTextBoxColumn.HeaderText = "caPlayList";
+            this.caPlayListDataGridViewTextBoxColumn.Name = "caPlayListDataGridViewTextBoxColumn";
+            this.caPlayListDataGridViewTextBoxColumn.ReadOnly = true;
+            this.caPlayListDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dePlayListBindingSource
+            // 
+            this.dePlayListBindingSource.DataSource = typeof(turnosAdministrator.Models.dePlayList);
+            this.dePlayListBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.dePlayListBindingSource_ListChanged);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel7.Controls.Add(this.txtPlayListname, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.metroLabel10, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(553, 32);
+            this.tableLayoutPanel7.TabIndex = 12;
+            // 
+            // txtPlayListname
+            // 
+            this.txtPlayListname.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtPlayListname.CustomButton.Image = null;
+            this.txtPlayListname.CustomButton.Location = new System.Drawing.Point(312, 2);
+            this.txtPlayListname.CustomButton.Name = "";
+            this.txtPlayListname.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPlayListname.CustomButton.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtPlayListname.CustomButton.TabIndex = 1;
+            this.txtPlayListname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPlayListname.CustomButton.UseSelectable = true;
+            this.txtPlayListname.CustomButton.Visible = false;
+            this.txtPlayListname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.caPlayListBingSource, "playListName", true));
+            this.txtPlayListname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPlayListname.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtPlayListname.Lines = new string[0];
+            this.txtPlayListname.Location = new System.Drawing.Point(214, 3);
+            this.txtPlayListname.MaxLength = 50;
+            this.txtPlayListname.Name = "txtPlayListname";
+            this.txtPlayListname.PasswordChar = '\0';
+            this.txtPlayListname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPlayListname.SelectedText = "";
+            this.txtPlayListname.SelectionLength = 0;
+            this.txtPlayListname.SelectionStart = 0;
+            this.txtPlayListname.ShowClearButton = true;
+            this.txtPlayListname.Size = new System.Drawing.Size(336, 26);
+            this.txtPlayListname.TabIndex = 12;
+            this.txtPlayListname.UseSelectable = true;
+            this.txtPlayListname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPlayListname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // caPlayListBingSource
+            // 
+            this.caPlayListBingSource.DataSource = typeof(turnosAdministrator.Models.caPlayList);
+            this.caPlayListBingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.caPlayListBingSource_ListChanged);
+            this.caPlayListBingSource.PositionChanged += new System.EventHandler(this.caPlayListBingSource_PositionChanged);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(3, 6);
+            this.metroLabel10.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(205, 19);
+            this.metroLabel10.TabIndex = 11;
+            this.metroLabel10.Text = "Nombre de lista de reproducción";
+            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pnlPlayList
+            // 
+            this.pnlPlayList.AutoSize = true;
+            this.pnlPlayList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlPlayList.ColumnCount = 2;
+            this.pnlPlayList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlPlayList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.pnlPlayList.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.pnlPlayList.Controls.Add(this.tableLayoutPanel5, 0, 0);
+            this.pnlPlayList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPlayList.Location = new System.Drawing.Point(0, 0);
+            this.pnlPlayList.Name = "pnlPlayList";
+            this.pnlPlayList.RowCount = 1;
+            this.pnlPlayList.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.pnlPlayList.Size = new System.Drawing.Size(329, 446);
+            this.pnlPlayList.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.pbRefreshPlayList);
+            this.flowLayoutPanel1.Controls.Add(this.pbEditPlayList);
+            this.flowLayoutPanel1.Controls.Add(this.pbDeletePlayList);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(299, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(30, 446);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.AutoSize = true;
+            this.tableLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.metroLabel9, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.gdPlayList, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(299, 446);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 3);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(3);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(140, 19);
+            this.metroLabel9.TabIndex = 9;
+            this.metroLabel9.Text = "Listas de reproducción";
+            // 
+            // gdPlayList
+            // 
+            this.gdPlayList.AllowUserToAddRows = false;
+            this.gdPlayList.AllowUserToDeleteRows = false;
+            this.gdPlayList.AllowUserToOrderColumns = true;
+            this.gdPlayList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.gdPlayList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.gdPlayList.AutoGenerateColumns = false;
+            this.gdPlayList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gdPlayList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gdPlayList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gdPlayList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdPlayList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.gdPlayList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdPlayList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn2,
+            this.playListNameDataGridViewTextBoxColumn,
+            this.totalVideosDataGridViewTextBoxColumn,
+            this.fInsDataGridViewTextBoxColumn2,
+            this.fActDataGridViewTextBoxColumn2});
+            this.gdPlayList.DataSource = this.caPlayListBingSource;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdPlayList.DefaultCellStyle = dataGridViewCellStyle7;
+            this.gdPlayList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdPlayList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gdPlayList.EnableHeadersVisualStyles = false;
+            this.gdPlayList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gdPlayList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gdPlayList.Location = new System.Drawing.Point(3, 28);
+            this.gdPlayList.MultiSelect = false;
+            this.gdPlayList.Name = "gdPlayList";
+            this.gdPlayList.ReadOnly = true;
+            this.gdPlayList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdPlayList.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.gdPlayList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gdPlayList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gdPlayList.ShowCellErrors = false;
+            this.gdPlayList.ShowEditingIcon = false;
+            this.gdPlayList.ShowRowErrors = false;
+            this.gdPlayList.Size = new System.Drawing.Size(293, 415);
+            this.gdPlayList.StandardTab = true;
+            this.gdPlayList.Style = MetroFramework.MetroColorStyle.Orange;
+            this.gdPlayList.TabIndex = 4;
+            this.gdPlayList.UseStyleColors = true;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // playListNameDataGridViewTextBoxColumn
+            // 
+            this.playListNameDataGridViewTextBoxColumn.DataPropertyName = "playListName";
+            this.playListNameDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.playListNameDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.playListNameDataGridViewTextBoxColumn.Name = "playListNameDataGridViewTextBoxColumn";
+            this.playListNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.playListNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // totalVideosDataGridViewTextBoxColumn
+            // 
+            this.totalVideosDataGridViewTextBoxColumn.DataPropertyName = "totalVideos";
+            this.totalVideosDataGridViewTextBoxColumn.HeaderText = "Catidad de Videos";
+            this.totalVideosDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.totalVideosDataGridViewTextBoxColumn.Name = "totalVideosDataGridViewTextBoxColumn";
+            this.totalVideosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fInsDataGridViewTextBoxColumn2
+            // 
+            this.fInsDataGridViewTextBoxColumn2.DataPropertyName = "fIns";
+            this.fInsDataGridViewTextBoxColumn2.HeaderText = "Fecha de Registro";
+            this.fInsDataGridViewTextBoxColumn2.MinimumWidth = 200;
+            this.fInsDataGridViewTextBoxColumn2.Name = "fInsDataGridViewTextBoxColumn2";
+            this.fInsDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.fInsDataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // fActDataGridViewTextBoxColumn2
+            // 
+            this.fActDataGridViewTextBoxColumn2.DataPropertyName = "fAct";
+            this.fActDataGridViewTextBoxColumn2.HeaderText = "fAct";
+            this.fActDataGridViewTextBoxColumn2.Name = "fActDataGridViewTextBoxColumn2";
+            this.fActDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.fActDataGridViewTextBoxColumn2.Visible = false;
             // 
             // metroTabPage3
             // 
@@ -846,7 +1506,7 @@ namespace turnosAdministrator
             this.metroTabPage3.Controls.Add(this.splitContainer1);
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(953, 323);
+            this.metroTabPage3.Size = new System.Drawing.Size(909, 454);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Administracón de Clima";
             // 
@@ -886,7 +1546,7 @@ namespace turnosAdministrator
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(950, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(906, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -900,7 +1560,7 @@ namespace turnosAdministrator
             this.pnlNotifications.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlNotifications.Controls.Add(this.label1);
             this.pnlNotifications.Controls.Add(this.pbSpnr);
-            this.pnlNotifications.Location = new System.Drawing.Point(303, 193);
+            this.pnlNotifications.Location = new System.Drawing.Point(303, 18);
             this.pnlNotifications.Name = "pnlNotifications";
             this.pnlNotifications.Size = new System.Drawing.Size(424, 74);
             this.pnlNotifications.TabIndex = 10;
@@ -930,14 +1590,49 @@ namespace turnosAdministrator
             this.pbSpnr.UseStyleColors = true;
             this.pbSpnr.Value = 50;
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            // 
+            // weatherDataGridViewTextBoxColumn1
+            // 
+            this.weatherDataGridViewTextBoxColumn1.DataPropertyName = "weather";
+            this.weatherDataGridViewTextBoxColumn1.HeaderText = "weather";
+            this.weatherDataGridViewTextBoxColumn1.Name = "weatherDataGridViewTextBoxColumn1";
+            // 
+            // descriptionDataGridViewTextBoxColumn1
+            // 
+            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
+            // 
+            // fInsDataGridViewTextBoxColumn1
+            // 
+            this.fInsDataGridViewTextBoxColumn1.DataPropertyName = "fIns";
+            this.fInsDataGridViewTextBoxColumn1.HeaderText = "fIns";
+            this.fInsDataGridViewTextBoxColumn1.Name = "fInsDataGridViewTextBoxColumn1";
+            // 
+            // factDataGridViewTextBoxColumn1
+            // 
+            this.factDataGridViewTextBoxColumn1.DataPropertyName = "fact";
+            this.factDataGridViewTextBoxColumn1.HeaderText = "fact";
+            this.factDataGridViewTextBoxColumn1.Name = "factDataGridViewTextBoxColumn1";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 445);
+            this.ClientSize = new System.Drawing.Size(957, 576);
             this.Controls.Add(this.pnlNotifications);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabCtrl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(717, 400);
             this.Name = "frmMain";
             this.Style = MetroFramework.MetroColorStyle.Silver;
@@ -963,6 +1658,16 @@ namespace turnosAdministrator
             ((System.ComponentModel.ISupportInitialize)(this.pbRefreshWeatherForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeleteWeatherForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizarTurnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeletePlayList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefreshPlayList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCancelPlayList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSavePlayList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNewPlayList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNewVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditPlayList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDefault)).EndInit();
             this.tabCtrl.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -973,6 +1678,33 @@ namespace turnosAdministrator
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.strctVentanillaBindingSource)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.pnlNewPlayList.ResumeLayout(false);
+            this.pnlNewPlayList.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdVideos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dePlayListBindingSource)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.caPlayListBingSource)).EndInit();
+            this.pnlPlayList.ResumeLayout(false);
+            this.pnlPlayList.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdPlayList)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
             this.metroContextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1007,7 +1739,6 @@ namespace turnosAdministrator
         private MetroFramework.Controls.MetroLabel lblServicio1Atiende;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Label lblTurnoActual;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel pnlWeatherForm;
@@ -1044,6 +1775,50 @@ namespace turnosAdministrator
         private System.Windows.Forms.PictureBox pbRefreshWeatherForm;
         private System.Windows.Forms.PictureBox pbDeleteWeatherForm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TableLayoutPanel pnlPlayList;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pbRefreshPlayList;
+        private System.Windows.Forms.PictureBox pbDeletePlayList;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroGrid gdPlayList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weatherDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fInsDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn factDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.PictureBox pbNewPlayList;
+        private System.Windows.Forms.PictureBox pbSavePlayList;
+        private System.Windows.Forms.PictureBox pbCancelPlayList;
+        private System.Windows.Forms.TableLayoutPanel pnlNewPlayList;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.PictureBox pbNewVideo;
+        private System.Windows.Forms.PictureBox pbPlayVideo;
+        private System.Windows.Forms.PictureBox pbDeleteVideo;
+        private MetroFramework.Controls.MetroGrid gdVideos;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private MetroFramework.Controls.MetroTextBox txtPlayListname;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private System.Windows.Forms.BindingSource caPlayListBingSource;
+        private System.Windows.Forms.BindingSource dePlayListBindingSource;
+        private System.Windows.Forms.PictureBox pbEditPlayList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPlayListDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn videoPathDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fInsDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fActDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caPlayListDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn playListNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalVideosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fInsDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fActDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.PictureBox pbDefault;
     }
 }
 

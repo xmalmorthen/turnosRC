@@ -5,21 +5,52 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "turnosDashboard", "turnosDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "turnosAdministrator", "turnosAdministrator\turnosAdministrator.csproj", "{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}"
 EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "TurnosSetup", "setups\TurnosSetup\TurnosSetup.isproj", "{5C7353F7-A319-498B-838D-E664CC9FCDC6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90} = {494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
 		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
 		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6E7C38-8B43-4D71-8C2E-18CF3BFDC985}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
 		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{494AB0A9-F33A-4E4F-8CE8-7F7392EF4C90}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.Debug|Any CPU.ActiveCfg = CD_ROM
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.Debug|Any CPU.Build.0 = CD_ROM
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.Debug|Any CPU.Deploy.0 = CD_ROM
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.DVD-5|Any CPU.Build.0 = DVD-5
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.Release|Any CPU.ActiveCfg = SingleImage
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.Release|Any CPU.Build.0 = SingleImage
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{5C7353F7-A319-498B-838D-E664CC9FCDC6}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

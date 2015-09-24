@@ -2,11 +2,30 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB">
   <DataContextMoniker Name="/DBDataContext" />
   <nestedChildShapes>
-    <classShape Id="6524cbd3-f6b9-4cce-9d50-e7766e69c115" absoluteBounds="1.5, 1.625, 2, 1.7708968098958331">
+    <classShape Id="6524cbd3-f6b9-4cce-9d50-e7766e69c115" absoluteBounds="1.625, 1.125, 2, 1.7708968098958331">
       <DataClassMoniker Name="/DBDataContext/caWeathers" />
       <nestedChildShapes>
-        <elementListCompartment Id="020eeb6e-f4e5-4e3e-8f0c-55afc75e107e" absoluteBounds="1.5149999999999997, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="020eeb6e-f4e5-4e3e-8f0c-55afc75e107e" absoluteBounds="1.6399999999999997, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="a74a0e74-509c-4198-9a2f-7b7b4774bd68" absoluteBounds="7, 1.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBDataContext/dePlayList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8be9ceca-50b5-411c-82c1-69ee7e6712c7" absoluteBounds="7.015, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52cbee73-8d48-410b-b98d-be7b6eb83391" absoluteBounds="4.375, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBDataContext/caPlayList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="687749a9-9c02-40ed-abdf-775473c2545e" absoluteBounds="4.39, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 2.01044840494792); (7 : 2.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBDataContext/caPlayList/caPlayList_dePlayList" />
+      <nodes>
+        <classShapeMoniker Id="52cbee73-8d48-410b-b98d-be7b6eb83391" />
+        <classShapeMoniker Id="a74a0e74-509c-4198-9a2f-7b7b4774bd68" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

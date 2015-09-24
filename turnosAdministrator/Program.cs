@@ -2,7 +2,9 @@
 using NLog.Targets;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +20,10 @@ namespace turnosAdministrator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
+
+            string assemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(assemblyFolder + "\\" + turnosAdministrator.Properties.Settings.Default.ApplicationName + "NLog.config", true);
+
             Init();
         }
 

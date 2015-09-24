@@ -33,6 +33,12 @@ namespace turnosAdministrator.Models
     partial void InsertcaWeathers(caWeathers instance);
     partial void UpdatecaWeathers(caWeathers instance);
     partial void DeletecaWeathers(caWeathers instance);
+    partial void InsertdePlayList(dePlayList instance);
+    partial void UpdatedePlayList(dePlayList instance);
+    partial void DeletedePlayList(dePlayList instance);
+    partial void InsertcaPlayList(caPlayList instance);
+    partial void UpdatecaPlayList(caPlayList instance);
+    partial void DeletecaPlayList(caPlayList instance);
     #endregion
 		
 		public DBDataContext() : 
@@ -70,6 +76,22 @@ namespace turnosAdministrator.Models
 			get
 			{
 				return this.GetTable<caWeathers>();
+			}
+		}
+		
+		public System.Data.Linq.Table<dePlayList> dePlayList
+		{
+			get
+			{
+				return this.GetTable<dePlayList>();
+			}
+		}
+		
+		public System.Data.Linq.Table<caPlayList> caPlayList
+		{
+			get
+			{
+				return this.GetTable<caPlayList>();
 			}
 		}
 	}
@@ -229,6 +251,415 @@ namespace turnosAdministrator.Models
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.dePlayList")]
+	public partial class dePlayList : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private short _idPlayList;
+		
+		private string _videoPath;
+		
+		private System.DateTime _fIns;
+		
+		private System.Nullable<System.DateTime> _fAct;
+		
+		private EntityRef<caPlayList> _caPlayList;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnidPlayListChanging(short value);
+    partial void OnidPlayListChanged();
+    partial void OnvideoPathChanging(string value);
+    partial void OnvideoPathChanged();
+    partial void OnfInsChanging(System.DateTime value);
+    partial void OnfInsChanged();
+    partial void OnfActChanging(System.Nullable<System.DateTime> value);
+    partial void OnfActChanged();
+    #endregion
+		
+		public dePlayList()
+		{
+			this._caPlayList = default(EntityRef<caPlayList>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPlayList", DbType="SmallInt NOT NULL")]
+		public short idPlayList
+		{
+			get
+			{
+				return this._idPlayList;
+			}
+			set
+			{
+				if ((this._idPlayList != value))
+				{
+					if (this._caPlayList.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidPlayListChanging(value);
+					this.SendPropertyChanging();
+					this._idPlayList = value;
+					this.SendPropertyChanged("idPlayList");
+					this.OnidPlayListChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_videoPath", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string videoPath
+		{
+			get
+			{
+				return this._videoPath;
+			}
+			set
+			{
+				if ((this._videoPath != value))
+				{
+					this.OnvideoPathChanging(value);
+					this.SendPropertyChanging();
+					this._videoPath = value;
+					this.SendPropertyChanged("videoPath");
+					this.OnvideoPathChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fIns", DbType="DateTime NOT NULL", IsDbGenerated=true)]
+		public System.DateTime fIns
+		{
+			get
+			{
+				return this._fIns;
+			}
+			set
+			{
+				if ((this._fIns != value))
+				{
+					this.OnfInsChanging(value);
+					this.SendPropertyChanging();
+					this._fIns = value;
+					this.SendPropertyChanged("fIns");
+					this.OnfInsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fAct", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fAct
+		{
+			get
+			{
+				return this._fAct;
+			}
+			set
+			{
+				if ((this._fAct != value))
+				{
+					this.OnfActChanging(value);
+					this.SendPropertyChanging();
+					this._fAct = value;
+					this.SendPropertyChanged("fAct");
+					this.OnfActChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="caPlayList_dePlayList", Storage="_caPlayList", ThisKey="idPlayList", OtherKey="id", IsForeignKey=true)]
+		public caPlayList caPlayList
+		{
+			get
+			{
+				return this._caPlayList.Entity;
+			}
+			set
+			{
+				caPlayList previousValue = this._caPlayList.Entity;
+				if (((previousValue != value) 
+							|| (this._caPlayList.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._caPlayList.Entity = null;
+						previousValue.dePlayList.Remove(this);
+					}
+					this._caPlayList.Entity = value;
+					if ((value != null))
+					{
+						value.dePlayList.Add(this);
+						this._idPlayList = value.id;
+					}
+					else
+					{
+						this._idPlayList = default(short);
+					}
+					this.SendPropertyChanged("caPlayList");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.caPlayList")]
+	public partial class caPlayList : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private short _id;
+		
+		private string _playListName;
+		
+		private short _totalVideos;
+		
+		private System.DateTime _fIns;
+		
+		private System.Nullable<System.DateTime> _fAct;
+		
+		private bool _defaultPL;
+		
+		private EntitySet<dePlayList> _dePlayList;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(short value);
+    partial void OnidChanged();
+    partial void OnplayListNameChanging(string value);
+    partial void OnplayListNameChanged();
+    partial void OntotalVideosChanging(short value);
+    partial void OntotalVideosChanged();
+    partial void OnfInsChanging(System.DateTime value);
+    partial void OnfInsChanged();
+    partial void OnfActChanging(System.Nullable<System.DateTime> value);
+    partial void OnfActChanged();
+    partial void OndefaultPLChanging(bool value);
+    partial void OndefaultPLChanged();
+    #endregion
+		
+		public caPlayList()
+		{
+			this._dePlayList = new EntitySet<dePlayList>(new Action<dePlayList>(this.attach_dePlayList), new Action<dePlayList>(this.detach_dePlayList));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="SmallInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public short id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_playListName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string playListName
+		{
+			get
+			{
+				return this._playListName;
+			}
+			set
+			{
+				if ((this._playListName != value))
+				{
+					this.OnplayListNameChanging(value);
+					this.SendPropertyChanging();
+					this._playListName = value;
+					this.SendPropertyChanged("playListName");
+					this.OnplayListNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalVideos", DbType="SmallInt NOT NULL")]
+		public short totalVideos
+		{
+			get
+			{
+				return this._totalVideos;
+			}
+			set
+			{
+				if ((this._totalVideos != value))
+				{
+					this.OntotalVideosChanging(value);
+					this.SendPropertyChanging();
+					this._totalVideos = value;
+					this.SendPropertyChanged("totalVideos");
+					this.OntotalVideosChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fIns", DbType="DateTime NOT NULL", IsDbGenerated=true)]
+		public System.DateTime fIns
+		{
+			get
+			{
+				return this._fIns;
+			}
+			set
+			{
+				if ((this._fIns != value))
+				{
+					this.OnfInsChanging(value);
+					this.SendPropertyChanging();
+					this._fIns = value;
+					this.SendPropertyChanged("fIns");
+					this.OnfInsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fAct", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fAct
+		{
+			get
+			{
+				return this._fAct;
+			}
+			set
+			{
+				if ((this._fAct != value))
+				{
+					this.OnfActChanging(value);
+					this.SendPropertyChanging();
+					this._fAct = value;
+					this.SendPropertyChanged("fAct");
+					this.OnfActChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_defaultPL", DbType="Bit NOT NULL")]
+		public bool defaultPL
+		{
+			get
+			{
+				return this._defaultPL;
+			}
+			set
+			{
+				if ((this._defaultPL != value))
+				{
+					this.OndefaultPLChanging(value);
+					this.SendPropertyChanging();
+					this._defaultPL = value;
+					this.SendPropertyChanged("defaultPL");
+					this.OndefaultPLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="caPlayList_dePlayList", Storage="_dePlayList", ThisKey="id", OtherKey="idPlayList")]
+		public EntitySet<dePlayList> dePlayList
+		{
+			get
+			{
+				return this._dePlayList;
+			}
+			set
+			{
+				this._dePlayList.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_dePlayList(dePlayList entity)
+		{
+			this.SendPropertyChanging();
+			entity.caPlayList = this;
+		}
+		
+		private void detach_dePlayList(dePlayList entity)
+		{
+			this.SendPropertyChanging();
+			entity.caPlayList = null;
 		}
 	}
 }

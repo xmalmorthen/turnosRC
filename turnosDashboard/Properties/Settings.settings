@@ -37,8 +37,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=10.10.20.134\MSSQLSERVER2014;Initial Catalog=bdTurnos;Persist Security Info=True;User ID=sa;Password=as</Value>
     </Setting>
-    <Setting Name="WeatherDinamicRefresh" Type="System.Decimal" Scope="User">
+    <Setting Name="WeatherDinamicRefresh" Type="System.Decimal" Scope="Application">
       <Value Profile="(Default)">0.5</Value>
+    </Setting>
+    <Setting Name="ApplicationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">turnosDashboard</Value>
     </Setting>
   </Settings>
 </SettingsFile>

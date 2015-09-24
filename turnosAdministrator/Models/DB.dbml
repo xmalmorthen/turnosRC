@@ -9,4 +9,25 @@
       <Column Name="fact" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.dePlayList" Member="dePlayList">
+    <Type Name="dePlayList">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idPlayList" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="videoPath" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="fIns" AutoSync="Never" Type="System.DateTime" DbType="DateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fAct" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="caPlayList_dePlayList" Member="caPlayList" ThisKey="idPlayList" OtherKey="id" Type="caPlayList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.caPlayList" Member="caPlayList">
+    <Type Name="caPlayList">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="playListName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="totalVideos" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="fIns" AutoSync="Never" Type="System.DateTime" DbType="DateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fAct" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="defaultPL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="caPlayList_dePlayList" Member="dePlayList" ThisKey="id" OtherKey="idPlayList" Type="dePlayList" />
+    </Type>
+  </Table>
 </Database>

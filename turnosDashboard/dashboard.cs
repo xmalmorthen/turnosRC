@@ -16,6 +16,9 @@ namespace turnosDashboard
         private Timer tmHora;
         private Timer tmRefesh;
 
+        System.Threading.Thread weatherDinamicThread;
+        System.Threading.Thread weatherDefaultThread;
+
         public dashboard()
         {
             InitializeComponent();
@@ -59,10 +62,10 @@ namespace turnosDashboard
             lblFecha.Text = String.Format("{0:dddd, d} de {0:MMMM} de {0:yyyy}", DateTime.Now);
 
 
-            System.Threading.Thread weatherDefaultThread = new System.Threading.Thread(getWeatherDefaultData);            
+            weatherDefaultThread = new System.Threading.Thread(getWeatherDefaultData);            
             weatherDefaultThread.Start();
 
-            System.Threading.Thread weatherDinamicThread = new System.Threading.Thread(getWeatherDinamicData);
+            weatherDinamicThread = new System.Threading.Thread(getWeatherDinamicData);
             weatherDinamicThread.Start(); 
 
 
@@ -133,20 +136,12 @@ namespace turnosDashboard
         {
             Size tam = new System.Drawing.Size(lblVentanilla.Width, lblVentanilla.Height);
             lblVentanilla.MaximumSize = tam;
+        }
 
-            /*tam = new System.Drawing.Size(lblTurno1Atiende.Width, lblTurno1Atiende.Height);
-            lblTurno1Atiende.MaximumSize = tam;
-            tam = new System.Drawing.Size(lblVentanilla1Atiende.Width, lblVentanilla1Atiende.Height);
-            lblVentanilla1Atiende.MaximumSize = tam;
-            tam = new System.Drawing.Size(lblServicio1Atiende.Width, lblServicio1Atiende.Height);
-            lblServicio1Atiende.MaximumSize = tam;
-
-            tam = new System.Drawing.Size(lblTurno2Atiende.Width, lblTurno2Atiende.Height);
-            lblTurno2Atiende.MaximumSize = tam;
-            tam = new System.Drawing.Size(lblVentanilla2Atiende.Width, lblVentanilla2Atiende.Height);
-            lblVentanilla2Atiende.MaximumSize = tam;
-            tam = new System.Drawing.Size(lblServicio2Atiende.Width, lblServicio2Atiende.Height);
-            lblServicio2Atiende.MaximumSize = tam;*/
+        private void dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            weatherDinamicThread.Abort();
+            weatherDefaultThread.Abort();
         }
     }
 }

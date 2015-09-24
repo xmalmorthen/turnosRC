@@ -85,7 +85,7 @@ namespace turnosDashboard.Models
                             }
                             else
                             {
-                                throw new Exception(response.Data.REST_Service.Message.ToString());
+                                //throw new Exception(response.Data.REST_Service.Message.ToString());
                             }
                         }
                     }
@@ -152,7 +152,7 @@ namespace turnosDashboard.Models
                             }
                             else
                             {
-                                throw new Exception(response.Data.REST_Service.Message.ToString());
+                                //throw new Exception(response.Data.REST_Service.Message.ToString());
                             }
                         }
                     }

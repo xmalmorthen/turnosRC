@@ -105,6 +105,7 @@
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Models\DB.dbml.layout">
       <DependentUpon>DB.dbml</DependentUpon>
     </None>
@@ -121,7 +122,7 @@
     <Content Include="Assets\Sounds\defaultSound.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="NLog.config">
+    <Content Include="turnosDashboardNLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Models\DB.dbml">
@@ -142,10 +143,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="turnosDashboard_ClaveTemporal.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Content Include="turnosDashboard.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rectangulo.jpg" />

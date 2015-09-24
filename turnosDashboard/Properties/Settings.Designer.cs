@@ -115,15 +115,24 @@ namespace turnosDashboard.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0.5")]
         public decimal WeatherDinamicRefresh {
             get {
                 return ((decimal)(this["WeatherDinamicRefresh"]));
             }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("turnosDashboard")]
+        public string ApplicationName {
+            get {
+                return ((string)(this["ApplicationName"]));
+            }
             set {
-                this["WeatherDinamicRefresh"] = value;
+                this["ApplicationName"] = value;
             }
         }
     }
